@@ -1,0 +1,175 @@
+{
+  "standup_date": "2024-05-26",
+  "generated_at": "2025-06-01T05:43:44.794458",
+  "total_users_analyzed": 7,
+  "active_users_count": 1,
+  "inactive_users_count": 6,
+  "users": [
+    {
+      "username": "Tomasz Naumowicz",
+      "email": "tnaumowicz@microsoft.com",
+      "was_active": true,
+      "activity_summary": {
+        "commits_count": 2,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 2
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [
+          "Merged PR #2696: Re-insert the node on refresh in BaseCachedBranchDataProvider",
+          "Merged PR #2698: Update launchShell command to support different shell environments on Windows"
+        ],
+        "blockers": [],
+        "what_im_working_on_today": [
+          "Continuing work on fixing issues related to BaseCachedBranchDataProvider",
+          "Investigating further improvements to launchShell command"
+        ]
+      },
+      "insights": [
+        "High productivity with 2 significant PR merges",
+        "Focus on improving branch data handling and shell command functionality"
+      ]
+    },
+    {
+      "username": "Mike Krüger",
+      "email": "mikkrg@microsoft.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "No activity on the target date",
+        "Last activity was on 2025-05-22"
+      ]
+    },
+    {
+      "username": "copilot-swe-agent[bot]",
+      "email": "198982749+Copilot@users.noreply.github.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "No activity on the target date",
+        "Last activity was on 2025-05-21"
+      ]
+    },
+    {
+      "username": "Vsevolod Kukol",
+      "email": "sevoku@microsoft.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "No activity on the target date",
+        "Last activity was on 2025-05-19"
+      ]
+    },
+    {
+      "username": "Dmitry Shilov",
+      "email": "dshilov@microsoft.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "No activity on the target date",
+        "Last activity was on 2025-05-16"
+      ]
+    },
+    {
+      "username": "Dmitrii Shilov",
+      "email": "dshilov@microsoft.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "No activity on the target date",
+        "Last activity was on 2025-05-14"
+      ]
+    },
+    {
+      "username": "Sevo Kukol",
+      "email": "sevoku@microsoft.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "No activity on the target date",
+        "Last activity was on 2025-05-09"
+      ]
+    }
+  ],
+  "team_insights": {
+    "overall_productivity": "Low",
+    "team_velocity": "low",
+    "collaboration_level": "Limited activity observed on the target date",
+    "potential_bottlenecks": [
+      "Low overall activity across the team",
+      "Most users were inactive on the target date"
+    ],
+    "recommendations": [
+      "Review project priorities to boost activity",
+      "Encourage team members to share their current tasks and challenges"
+    ]
+  }
+}

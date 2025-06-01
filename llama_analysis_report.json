@@ -1,0 +1,87 @@
+{
+  "open_vs_closed": {
+    "total_issues": 107,
+    "open_issues": 65,
+    "closed_issues": 42,
+    "resolution_rate_percentage": 39.25,
+    "health_status": "fair",
+    "insights": [
+      "The project has a significant number of open issues, indicating ongoing work and potential challenges.",
+      "The resolution rate suggests that the team is actively addressing issues, but there is room for improvement.",
+      "The health status is fair, indicating that while progress is being made, there are areas that require attention."
+    ]
+  },
+  "critical_issues_status": {
+    "total_critical": 8,
+    "critical_open": 7,
+    "critical_closed": 1,
+    "critical_issue_titles": [
+      "Query Metrics are empty for the last page",
+      "NoSQL Query Editor shows empty result",
+      "Remove hidden input under Monaco Editor",
+      "MongoDB error",
+      "Importing multiple documents is very slow, need bulk-import support",
+      "[Feat] NOSQL: Set throughput bucket for requests",
+      "Support basic keyboard shortcuts in Query Editor"
+    ],
+    "insights": [
+      "The majority of critical issues are still open, indicating a need for prioritized attention.",
+      "The team has made some progress in addressing critical issues, but more work is needed.",
+      "The critical issues cover a range of topics, including performance and feature requests."
+    ]
+  },
+  "current_sprint_status": {
+    "milestone": "0.26.1",
+    "total_milestone_issues": 11,
+    "milestone_open": 9,
+    "milestone_closed": 2,
+    "completion_percentage": 18.18,
+    "insights": [
+      "The current sprint has a low completion percentage, indicating potential delays or challenges.",
+      "The team needs to focus on completing the remaining open issues to meet the milestone goals.",
+      "The sprint progress suggests that the team may need to adjust their plans or allocate additional resources."
+    ]
+  },
+  "external_blockers_impact": {
+    "total_blocked_issues": 2,
+    "blocked_issue_titles": [
+      "Query Metrics are empty for the last page",
+      "NoSQL Query Editor shows empty result"
+    ],
+    "impact_level": "medium",
+    "insights": [
+      "External blockers are affecting a small number of issues, but these issues are critical.",
+      "The team should prioritize resolving or mitigating these blockers to minimize their impact.",
+      "The blocked issues are related to specific features or functionalities, indicating potential dependencies or external factors."
+    ]
+  },
+  "external_blocker_breakdown": [
+    {
+      "blocker_type": "external dependency",
+      "affected_issues_count": 2,
+      "mitigation_strategy": "Collaborate with external teams or stakeholders to resolve the dependencies.",
+      "insights": [
+        "The external dependency is causing significant delays or challenges.",
+        "The team should establish clear communication channels with the external stakeholders to mitigate the risks."
+      ]
+    }
+  ],
+  "summary": {
+    "overall_health": "fair",
+    "key_concerns": [
+      "High number of open issues",
+      "Critical issues are not being addressed promptly",
+      "External blockers are impacting progress"
+    ],
+    "recommended_actions": [
+      "Prioritize critical issues and allocate necessary resources",
+      "Establish clear communication channels with external stakeholders",
+      "Review and adjust the sprint plan to ensure realistic goals"
+    ],
+    "strategic_insights": [
+      "The project requires a focused effort to address the critical issues and external blockers.",
+      "The team should consider allocating additional resources or adjusting their workflow to improve progress.",
+      "Stakeholder communication is crucial to manage expectations and ensure transparency about the project's status."
+    ]
+  }
+}
