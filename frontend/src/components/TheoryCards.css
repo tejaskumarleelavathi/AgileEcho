@@ -1,0 +1,38 @@
+.theory-section {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 24px auto;
+  padding: 0 48px;
+}
+
+.theory-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e6ffe6;
+  margin-bottom: 12px;
+  text-transform: lowercase;
+}
+
+.theory-cards-list {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+}
+
+.theory-card {
+  min-width: 200px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.08);
+  padding: 24px 18px;
+  color: #22223b;
+  font-size: 1.08rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+}
+
+.theory-card-icon {
+  font-size: 2rem;
+} 
