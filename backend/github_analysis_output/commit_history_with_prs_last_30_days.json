@@ -1,0 +1,1450 @@
+{
+  "repository": "microsoft/vscode-cosmosdb",
+  "extracted_at": "2025-06-01T03:36:14.499726",
+  "timeframe": {
+    "days_back": 30,
+    "from_date": "2025-05-02T07:36:04.241783+00:00",
+    "to_date": "2025-06-01T07:36:14.499758+00:00"
+  },
+  "total_commits": 52,
+  "total_commits_in_repo": 1353,
+  "users": {
+    "Tomasz Naumowicz <tnaumowicz@microsoft.com>": {
+      "2025-05-26": [
+        {
+          "sha": "84382b0dcf560be98e9e4980842f67f13fa6ac30",
+          "message": "Re-insert the node on refresh in BaseCachedBranchDataProvider (#2696)",
+          "date": "2025-05-26T10:12:31Z",
+          "time": "10:12:31",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/84382b0dcf560be98e9e4980842f67f13fa6ac30",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2696,
+            "title": "Re-insert the node on refresh in BaseCachedBranchDataProvider",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2696",
+            "created_at": "2025-05-21T08:47:28Z",
+            "merged_at": "2025-05-26T10:12:31Z",
+            "closed_at": "2025-05-26T10:12:31Z"
+          }
+        },
+        {
+          "sha": "8cf019177037502ac40dbccb10b82e1017dc4abc",
+          "message": "Update `launchShell` command to support different shell environments on Windows (#2698)",
+          "date": "2025-05-26T10:12:05Z",
+          "time": "10:12:05",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/8cf019177037502ac40dbccb10b82e1017dc4abc",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2698,
+            "title": "Update launchShell command to support different shell environments on Windows",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2698",
+            "created_at": "2025-05-21T11:54:30Z",
+            "merged_at": "2025-05-26T10:12:05Z",
+            "closed_at": "2025-05-26T10:12:05Z"
+          }
+        }
+      ],
+      "2025-05-22": [
+        {
+          "sha": "f68d99e7b075b8a1d012ad1a9964bf08b682bb08",
+          "message": "Merge branch 'main' into copilot/fix-2697",
+          "date": "2025-05-22T13:37:42Z",
+          "time": "13:37:42",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/f68d99e7b075b8a1d012ad1a9964bf08b682bb08",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2698,
+            "title": "Update launchShell command to support different shell environments on Windows",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2698",
+            "created_at": "2025-05-21T11:54:30Z",
+            "merged_at": "2025-05-26T10:12:05Z",
+            "closed_at": "2025-05-26T10:12:05Z"
+          }
+        },
+        {
+          "sha": "c5d4c8b34bfa7d7b5e2edbd311873c4c7b36f23e",
+          "message": "Merge branch 'main' into copilot/fix-2694",
+          "date": "2025-05-22T13:37:24Z",
+          "time": "13:37:24",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/c5d4c8b34bfa7d7b5e2edbd311873c4c7b36f23e",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2696,
+            "title": "Re-insert the node on refresh in BaseCachedBranchDataProvider",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2696",
+            "created_at": "2025-05-21T08:47:28Z",
+            "merged_at": "2025-05-26T10:12:31Z",
+            "closed_at": "2025-05-26T10:12:31Z"
+          }
+        }
+      ],
+      "2025-05-21": [
+        {
+          "sha": "6ed390c3af390602887367de7b8e9a040c73b5f1",
+          "message": "Fixed `Previously attached MongoDB RU accounts get lost` #2649 (#2656)",
+          "date": "2025-05-21T15:55:14Z",
+          "time": "15:55:14",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/6ed390c3af390602887367de7b8e9a040c73b5f1",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2656,
+            "title": "Fixed `Previously attached MongoDB RU accounts get lost` #2649",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2656",
+            "created_at": "2025-04-21T16:06:36Z",
+            "merged_at": "2025-05-21T15:55:14Z",
+            "closed_at": "2025-05-21T15:55:14Z"
+          }
+        },
+        {
+          "sha": "159944e7faa3e13cdc6b0282102d76dc672391da",
+          "message": "Merge branch 'main' into dev/tnaum/2649-attached-mongodb-ru-accounts",
+          "date": "2025-05-21T15:00:33Z",
+          "time": "15:00:33",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/159944e7faa3e13cdc6b0282102d76dc672391da",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2656,
+            "title": "Fixed `Previously attached MongoDB RU accounts get lost` #2649",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2656",
+            "created_at": "2025-04-21T16:06:36Z",
+            "merged_at": "2025-05-21T15:55:14Z",
+            "closed_at": "2025-05-21T15:55:14Z"
+          }
+        },
+        {
+          "sha": "3bc909b0103906fcc8992af9116ec7e7903bba91",
+          "message": "fix: use `generateMongoStorageId` for migrated storage items",
+          "date": "2025-05-21T14:52:55Z",
+          "time": "14:52:55",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "Tomasz Naumowicz",
+          "committer_email": "tnaumowicz@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/3bc909b0103906fcc8992af9116ec7e7903bba91",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2656,
+            "title": "Fixed `Previously attached MongoDB RU accounts get lost` #2649",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2656",
+            "created_at": "2025-04-21T16:06:36Z",
+            "merged_at": "2025-05-21T15:55:14Z",
+            "closed_at": "2025-05-21T15:55:14Z"
+          }
+        }
+      ],
+      "2025-05-07": [
+        {
+          "sha": "1b32eeb53eb650a6562c487cfee93807036ba09f",
+          "message": "Merge branch 'main' into dev/tnaum/2649-attached-mongodb-ru-accounts",
+          "date": "2025-05-07T14:48:56Z",
+          "time": "14:48:56",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/1b32eeb53eb650a6562c487cfee93807036ba09f",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2656,
+            "title": "Fixed `Previously attached MongoDB RU accounts get lost` #2649",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2656",
+            "created_at": "2025-04-21T16:06:36Z",
+            "merged_at": "2025-05-21T15:55:14Z",
+            "closed_at": "2025-05-21T15:55:14Z"
+          }
+        }
+      ],
+      "2025-05-05": [
+        {
+          "sha": "f5a5d5f01f40b06e3cb6aa93b8d0c9fdf8280419",
+          "message": "fix: mongo `accountId` wasn't consistent",
+          "date": "2025-05-05T13:51:52Z",
+          "time": "13:51:52",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "Tomasz Naumowicz",
+          "committer_email": "tnaumowicz@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/f5a5d5f01f40b06e3cb6aa93b8d0c9fdf8280419",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2635,
+            "title": "Add an UriHandler to handle external requests to open/attach a specific account and open the Query Editor",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2635",
+            "created_at": "2025-03-29T16:56:09Z",
+            "merged_at": "2025-05-07T10:29:33Z",
+            "closed_at": "2025-05-07T10:29:33Z"
+          }
+        }
+      ],
+      "2025-05-02": [
+        {
+          "sha": "88ddec79f66ffc1e98fbeea53410b8f1e4ce6f33",
+          "message": "chore: extracted `generateMongoStorageId`",
+          "date": "2025-05-02T14:24:59Z",
+          "time": "14:24:59",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "Tomasz Naumowicz",
+          "committer_email": "tnaumowicz@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/88ddec79f66ffc1e98fbeea53410b8f1e4ce6f33",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2635,
+            "title": "Add an UriHandler to handle external requests to open/attach a specific account and open the Query Editor",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2635",
+            "created_at": "2025-03-29T16:56:09Z",
+            "merged_at": "2025-05-07T10:29:33Z",
+            "closed_at": "2025-05-07T10:29:33Z"
+          }
+        },
+        {
+          "sha": "1616425bd2efbbcee076fa7a06ea4332a7f68e55",
+          "message": "fix: updated UriHandler to create mongo entries for connection strings",
+          "date": "2025-05-02T12:58:10Z",
+          "time": "12:58:10",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "Tomasz Naumowicz",
+          "committer_email": "tnaumowicz@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/1616425bd2efbbcee076fa7a06ea4332a7f68e55",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2635,
+            "title": "Add an UriHandler to handle external requests to open/attach a specific account and open the Query Editor",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2635",
+            "created_at": "2025-03-29T16:56:09Z",
+            "merged_at": "2025-05-07T10:29:33Z",
+            "closed_at": "2025-05-07T10:29:33Z"
+          }
+        },
+        {
+          "sha": "0ab144636d9d2e64ce1b3c8786b612ed2467f7e2",
+          "message": "feat: migrates old mongoclusters connections",
+          "date": "2025-05-02T11:21:47Z",
+          "time": "11:21:47",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "Tomasz Naumowicz",
+          "committer_email": "tnaumowicz@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/0ab144636d9d2e64ce1b3c8786b612ed2467f7e2",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2635,
+            "title": "Add an UriHandler to handle external requests to open/attach a specific account and open the Query Editor",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2635",
+            "created_at": "2025-03-29T16:56:09Z",
+            "merged_at": "2025-05-07T10:29:33Z",
+            "closed_at": "2025-05-07T10:29:33Z"
+          }
+        },
+        {
+          "sha": "6177bc2634cc6717ab67492fb46e1a0c684c6abd",
+          "message": "fix: StorageService returns the item.id correctly",
+          "date": "2025-05-02T11:21:15Z",
+          "time": "11:21:15",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "Tomasz Naumowicz",
+          "committer_email": "tnaumowicz@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/6177bc2634cc6717ab67492fb46e1a0c684c6abd",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2635,
+            "title": "Add an UriHandler to handle external requests to open/attach a specific account and open the Query Editor",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2635",
+            "created_at": "2025-03-29T16:56:09Z",
+            "merged_at": "2025-05-07T10:29:33Z",
+            "closed_at": "2025-05-07T10:29:33Z"
+          }
+        },
+        {
+          "sha": "728401dcae50acaf030361d7449025b78fff79f4",
+          "message": "fix: made storageId of mongo connections '/'-less",
+          "date": "2025-05-02T10:12:59Z",
+          "time": "10:12:59",
+          "author_name": "Tomasz Naumowicz",
+          "author_email": "tnaumowicz@microsoft.com",
+          "committer_name": "Tomasz Naumowicz",
+          "committer_email": "tnaumowicz@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/728401dcae50acaf030361d7449025b78fff79f4",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2635,
+            "title": "Add an UriHandler to handle external requests to open/attach a specific account and open the Query Editor",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2635",
+            "created_at": "2025-03-29T16:56:09Z",
+            "merged_at": "2025-05-07T10:29:33Z",
+            "closed_at": "2025-05-07T10:29:33Z"
+          }
+        }
+      ]
+    },
+    "Mike Krüger <mikkrg@microsoft.com>": {
+      "2025-05-22": [
+        {
+          "sha": "1695fc847cae9cf242c57830405446b247688d57",
+          "message": "Fix issue #2663: Improve arial labels for \"Learn more…\" links. (#2693)",
+          "date": "2025-05-22T07:03:03Z",
+          "time": "07:03:03",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/1695fc847cae9cf242c57830405446b247688d57",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2693,
+            "title": "Fix issue #2663: Improve arial labels for \"Learn more…\" links.",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2693",
+            "created_at": "2025-05-19T08:38:06Z",
+            "merged_at": "2025-05-22T07:03:03Z",
+            "closed_at": "2025-05-22T07:03:03Z"
+          }
+        }
+      ],
+      "2025-05-16": [
+        {
+          "sha": "f56c3f9cc6b248dbb84a908942d1ba8a305d221c",
+          "message": "Fix issue #2663: Improve arial labels for \"Learn more…\" links.",
+          "date": "2025-05-16T10:44:03Z",
+          "time": "10:44:03",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "Mike Krüger",
+          "committer_email": "mikkrg@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/f56c3f9cc6b248dbb84a908942d1ba8a305d221c",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2693,
+            "title": "Fix issue #2663: Improve arial labels for \"Learn more…\" links.",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2693",
+            "created_at": "2025-05-19T08:38:06Z",
+            "merged_at": "2025-05-22T07:03:03Z",
+            "closed_at": "2025-05-22T07:03:03Z"
+          }
+        },
+        {
+          "sha": "11440074114d44f414d7e40bf635943db3b99643",
+          "message": "Fix issue #2665: Update ResultTab.tsx to improve query result l10n reporting. (#2679)",
+          "date": "2025-05-16T09:01:36Z",
+          "time": "09:01:36",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/11440074114d44f414d7e40bf635943db3b99643",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2679,
+            "title": "Fix issue #2665: Update ResultTab.tsx to improve query result l10n reporting.",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2679",
+            "created_at": "2025-05-09T08:43:30Z",
+            "merged_at": "2025-05-16T09:01:36Z",
+            "closed_at": "2025-05-16T09:01:36Z"
+          }
+        }
+      ],
+      "2025-05-12": [
+        {
+          "sha": "5cf976cf24e198830c4e4e4bf9bd9fd58f8006a0",
+          "message": "Merge branch 'main' into dev/mkrueger/fix2665",
+          "date": "2025-05-12T08:41:54Z",
+          "time": "08:41:54",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/5cf976cf24e198830c4e4e4bf9bd9fd58f8006a0",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2679,
+            "title": "Fix issue #2665: Update ResultTab.tsx to improve query result l10n reporting.",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2679",
+            "created_at": "2025-05-09T08:43:30Z",
+            "merged_at": "2025-05-16T09:01:36Z",
+            "closed_at": "2025-05-16T09:01:36Z"
+          }
+        },
+        {
+          "sha": "77e47c46568bf0cf12ae703925261843c2e2dc66",
+          "message": "Fix issue #2668: Corrected screen reader button announcement in ResultTabToolbar (#2680)",
+          "date": "2025-05-12T08:40:30Z",
+          "time": "08:40:30",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/77e47c46568bf0cf12ae703925261843c2e2dc66",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2680,
+            "title": "Fix issue #2668: Corrected screen reader button announcement in ResultTabToolbar",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2680",
+            "created_at": "2025-05-09T08:46:21Z",
+            "merged_at": "2025-05-12T08:40:30Z",
+            "closed_at": "2025-05-12T08:40:30Z"
+          }
+        },
+        {
+          "sha": "aa4c26fae06a1acfefcf5c3eb6a9763de4392744",
+          "message": "Fix issue #2661: Resolve l10n issue in QueryPanel (#2678)",
+          "date": "2025-05-12T08:40:16Z",
+          "time": "08:40:16",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/aa4c26fae06a1acfefcf5c3eb6a9763de4392744",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2678,
+            "title": "Fix issue #2661: Resolve l10n issue in QueryPanel",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2678",
+            "created_at": "2025-05-09T08:41:18Z",
+            "merged_at": "2025-05-12T08:40:16Z",
+            "closed_at": "2025-05-12T08:40:16Z"
+          }
+        },
+        {
+          "sha": "ffc07231800f7286d430640b60622440bd810f74",
+          "message": "Fix issue #2660: Resolve l10n issue in QueryPanel run button menu. (#2677)",
+          "date": "2025-05-12T08:39:38Z",
+          "time": "08:39:38",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/ffc07231800f7286d430640b60622440bd810f74",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2677,
+            "title": "Fix issue #2660: Resolve l10n issue in QueryPanel run button menu.",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2677",
+            "created_at": "2025-05-09T08:38:48Z",
+            "merged_at": "2025-05-12T08:39:38Z",
+            "closed_at": "2025-05-12T08:39:38Z"
+          }
+        }
+      ],
+      "2025-05-09": [
+        {
+          "sha": "7121315a92cea2ef701998d46e2094ed83cea0fb",
+          "message": "Run npm prettier",
+          "date": "2025-05-09T08:57:02Z",
+          "time": "08:57:02",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "Mike Krüger",
+          "committer_email": "mikkrg@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/7121315a92cea2ef701998d46e2094ed83cea0fb",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2680,
+            "title": "Fix issue #2668: Corrected screen reader button announcement in ResultTabToolbar",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2680",
+            "created_at": "2025-05-09T08:46:21Z",
+            "merged_at": "2025-05-12T08:40:30Z",
+            "closed_at": "2025-05-12T08:40:30Z"
+          }
+        },
+        {
+          "sha": "6f01089d935a6bc92258ec308fe45b718d1dcb10",
+          "message": "Run npm prettier",
+          "date": "2025-05-09T08:56:00Z",
+          "time": "08:56:00",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "Mike Krüger",
+          "committer_email": "mikkrg@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/6f01089d935a6bc92258ec308fe45b718d1dcb10",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2679,
+            "title": "Fix issue #2665: Update ResultTab.tsx to improve query result l10n reporting.",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2679",
+            "created_at": "2025-05-09T08:43:30Z",
+            "merged_at": "2025-05-16T09:01:36Z",
+            "closed_at": "2025-05-16T09:01:36Z"
+          }
+        },
+        {
+          "sha": "1db230d301b687aa70773017ca5456fc181e0b21",
+          "message": "Update localizations.",
+          "date": "2025-05-09T08:50:02Z",
+          "time": "08:50:02",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "Mike Krüger",
+          "committer_email": "mikkrg@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/1db230d301b687aa70773017ca5456fc181e0b21",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2677,
+            "title": "Fix issue #2660: Resolve l10n issue in QueryPanel run button menu.",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2677",
+            "created_at": "2025-05-09T08:38:48Z",
+            "merged_at": "2025-05-12T08:39:38Z",
+            "closed_at": "2025-05-12T08:39:38Z"
+          }
+        },
+        {
+          "sha": "dc1e805d23352c0f7679a4b395af682bc0d71c99",
+          "message": "Update localizations.",
+          "date": "2025-05-09T08:49:17Z",
+          "time": "08:49:17",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "Mike Krüger",
+          "committer_email": "mikkrg@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/dc1e805d23352c0f7679a4b395af682bc0d71c99",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2679,
+            "title": "Fix issue #2665: Update ResultTab.tsx to improve query result l10n reporting.",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2679",
+            "created_at": "2025-05-09T08:43:30Z",
+            "merged_at": "2025-05-16T09:01:36Z",
+            "closed_at": "2025-05-16T09:01:36Z"
+          }
+        },
+        {
+          "sha": "fc3336f86718ae1b5e452266f36342ca6bbfb531",
+          "message": "Update localizations.",
+          "date": "2025-05-09T08:48:51Z",
+          "time": "08:48:51",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "Mike Krüger",
+          "committer_email": "mikkrg@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/fc3336f86718ae1b5e452266f36342ca6bbfb531",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2678,
+            "title": "Fix issue #2661: Resolve l10n issue in QueryPanel",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2678",
+            "created_at": "2025-05-09T08:41:18Z",
+            "merged_at": "2025-05-12T08:40:16Z",
+            "closed_at": "2025-05-12T08:40:16Z"
+          }
+        },
+        {
+          "sha": "7f639cf099615bf72eca93a53307974a24191984",
+          "message": "Update localizations.",
+          "date": "2025-05-09T08:47:43Z",
+          "time": "08:47:43",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "Mike Krüger",
+          "committer_email": "mikkrg@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/7f639cf099615bf72eca93a53307974a24191984",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2680,
+            "title": "Fix issue #2668: Corrected screen reader button announcement in ResultTabToolbar",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2680",
+            "created_at": "2025-05-09T08:46:21Z",
+            "merged_at": "2025-05-12T08:40:30Z",
+            "closed_at": "2025-05-12T08:40:30Z"
+          }
+        }
+      ],
+      "2025-05-08": [
+        {
+          "sha": "77e2f043219ba53ed2b3b4134878c41ef714ff79",
+          "message": "Fix issue #2668: Corrected screen reader button announcement in ResultTabToolbar",
+          "date": "2025-05-08T12:18:01Z",
+          "time": "12:18:01",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "Mike Krüger",
+          "committer_email": "mikkrg@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/77e2f043219ba53ed2b3b4134878c41ef714ff79",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2680,
+            "title": "Fix issue #2668: Corrected screen reader button announcement in ResultTabToolbar",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2680",
+            "created_at": "2025-05-09T08:46:21Z",
+            "merged_at": "2025-05-12T08:40:30Z",
+            "closed_at": "2025-05-12T08:40:30Z"
+          }
+        },
+        {
+          "sha": "c5c06869cdb70ed9fdd8ef41219ea62122d1e70a",
+          "message": "Fix issue #2660: Resolve l10n issue in QueryPanel run button menu.",
+          "date": "2025-05-08T11:35:42Z",
+          "time": "11:35:42",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "Mike Krüger",
+          "committer_email": "mikkrg@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/c5c06869cdb70ed9fdd8ef41219ea62122d1e70a",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2677,
+            "title": "Fix issue #2660: Resolve l10n issue in QueryPanel run button menu.",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2677",
+            "created_at": "2025-05-09T08:38:48Z",
+            "merged_at": "2025-05-12T08:39:38Z",
+            "closed_at": "2025-05-12T08:39:38Z"
+          }
+        },
+        {
+          "sha": "304503419ab4779671eb87ca021b58350314a384",
+          "message": "Fix issue #2665: Update ResultTab.tsx to improve query result l10n\nreporting.",
+          "date": "2025-05-08T11:55:25Z",
+          "time": "11:55:25",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "Mike Krüger",
+          "committer_email": "mikkrg@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/304503419ab4779671eb87ca021b58350314a384",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2679,
+            "title": "Fix issue #2665: Update ResultTab.tsx to improve query result l10n reporting.",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2679",
+            "created_at": "2025-05-09T08:43:30Z",
+            "merged_at": "2025-05-16T09:01:36Z",
+            "closed_at": "2025-05-16T09:01:36Z"
+          }
+        },
+        {
+          "sha": "97ce2dc700943500a0076da995fe58928a1441f4",
+          "message": "Fix issue #2661: Resolve l10n issue in QueryPanel",
+          "date": "2025-05-08T11:59:17Z",
+          "time": "11:59:17",
+          "author_name": "Mike Krüger",
+          "author_email": "mikkrg@microsoft.com",
+          "committer_name": "Mike Krüger",
+          "committer_email": "mikkrg@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/97ce2dc700943500a0076da995fe58928a1441f4",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2678,
+            "title": "Fix issue #2661: Resolve l10n issue in QueryPanel",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2678",
+            "created_at": "2025-05-09T08:41:18Z",
+            "merged_at": "2025-05-12T08:40:16Z",
+            "closed_at": "2025-05-12T08:40:16Z"
+          }
+        }
+      ]
+    },
+    "copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>": {
+      "2025-05-21": [
+        {
+          "sha": "76cb1a1917801d2c697817cd17f1ede16aeef9e5",
+          "message": "Improve refresh method to handle stale references\n\nCo-authored-by: tnaum-ms <171359267+tnaum-ms@users.noreply.github.com>",
+          "date": "2025-05-21T14:36:15Z",
+          "time": "14:36:15",
+          "author_name": "copilot-swe-agent[bot]",
+          "author_email": "198982749+Copilot@users.noreply.github.com",
+          "committer_name": "copilot-swe-agent[bot]",
+          "committer_email": "198982749+Copilot@users.noreply.github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/76cb1a1917801d2c697817cd17f1ede16aeef9e5",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2696,
+            "title": "Re-insert the node on refresh in BaseCachedBranchDataProvider",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2696",
+            "created_at": "2025-05-21T08:47:28Z",
+            "merged_at": "2025-05-26T10:12:31Z",
+            "closed_at": "2025-05-26T10:12:31Z"
+          }
+        },
+        {
+          "sha": "370e5d21faa0736bbf2fa0cf58c9df6f3adaa0f0",
+          "message": "Update launchShell.ts with improved terminal detection and environment handling\n\nCo-authored-by: tnaum-ms <171359267+tnaum-ms@users.noreply.github.com>",
+          "date": "2025-05-21T12:03:20Z",
+          "time": "12:03:20",
+          "author_name": "copilot-swe-agent[bot]",
+          "author_email": "198982749+Copilot@users.noreply.github.com",
+          "committer_name": "copilot-swe-agent[bot]",
+          "committer_email": "198982749+Copilot@users.noreply.github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/370e5d21faa0736bbf2fa0cf58c9df6f3adaa0f0",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2698,
+            "title": "Update launchShell command to support different shell environments on Windows",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2698",
+            "created_at": "2025-05-21T11:54:30Z",
+            "merged_at": "2025-05-26T10:12:05Z",
+            "closed_at": "2025-05-26T10:12:05Z"
+          }
+        },
+        {
+          "sha": "447d016675c14725c835a2535c9d20fbad031580",
+          "message": "Initial plan for issue",
+          "date": "2025-05-21T11:54:29Z",
+          "time": "11:54:29",
+          "author_name": "copilot-swe-agent[bot]",
+          "author_email": "198982749+Copilot@users.noreply.github.com",
+          "committer_name": "copilot-swe-agent[bot]",
+          "committer_email": "198982749+Copilot@users.noreply.github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/447d016675c14725c835a2535c9d20fbad031580",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2698,
+            "title": "Update launchShell command to support different shell environments on Windows",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2698",
+            "created_at": "2025-05-21T11:54:30Z",
+            "merged_at": "2025-05-26T10:12:05Z",
+            "closed_at": "2025-05-26T10:12:05Z"
+          }
+        },
+        {
+          "sha": "ee38f3eaf85f6fc275ad10569450285840d14bd3",
+          "message": "Re-insert the node on refresh in BaseCachedBranchDataProvider\n\nCo-authored-by: tnaum-ms <171359267+tnaum-ms@users.noreply.github.com>",
+          "date": "2025-05-21T08:56:41Z",
+          "time": "08:56:41",
+          "author_name": "copilot-swe-agent[bot]",
+          "author_email": "198982749+Copilot@users.noreply.github.com",
+          "committer_name": "copilot-swe-agent[bot]",
+          "committer_email": "198982749+Copilot@users.noreply.github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/ee38f3eaf85f6fc275ad10569450285840d14bd3",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2696,
+            "title": "Re-insert the node on refresh in BaseCachedBranchDataProvider",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2696",
+            "created_at": "2025-05-21T08:47:28Z",
+            "merged_at": "2025-05-26T10:12:31Z",
+            "closed_at": "2025-05-26T10:12:31Z"
+          }
+        },
+        {
+          "sha": "c7117a8705e6abc0689a5a09e84cb4d2c1dece62",
+          "message": "Initial plan for issue",
+          "date": "2025-05-21T08:47:27Z",
+          "time": "08:47:27",
+          "author_name": "copilot-swe-agent[bot]",
+          "author_email": "198982749+Copilot@users.noreply.github.com",
+          "committer_name": "copilot-swe-agent[bot]",
+          "committer_email": "198982749+Copilot@users.noreply.github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/c7117a8705e6abc0689a5a09e84cb4d2c1dece62",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2696,
+            "title": "Re-insert the node on refresh in BaseCachedBranchDataProvider",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2696",
+            "created_at": "2025-05-21T08:47:28Z",
+            "merged_at": "2025-05-26T10:12:31Z",
+            "closed_at": "2025-05-26T10:12:31Z"
+          }
+        }
+      ]
+    },
+    "Vsevolod Kukol <sevoku@microsoft.com>": {
+      "2025-05-19": [
+        {
+          "sha": "36da7c60b77409474dce72df703f8dfe650fb8ff",
+          "message": "fix: normalize authentication scopes for test environments in getCosmosClient (#2676)",
+          "date": "2025-05-19T09:57:28Z",
+          "time": "09:57:28",
+          "author_name": "Vsevolod Kukol",
+          "author_email": "sevoku@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/36da7c60b77409474dce72df703f8dfe650fb8ff",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2676,
+            "title": "fix: normalize authentication scopes for test environments in getCosmosClient",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2676",
+            "created_at": "2025-05-09T07:50:42Z",
+            "merged_at": "2025-05-19T09:57:29Z",
+            "closed_at": "2025-05-19T09:57:29Z"
+          }
+        }
+      ],
+      "2025-05-09": [
+        {
+          "sha": "bf825b187a97c29a2044d2cae9b84f27a31fd519",
+          "message": "update version to 0.27.0-alpha (#2681)",
+          "date": "2025-05-09T11:19:50Z",
+          "time": "11:19:50",
+          "author_name": "Vsevolod Kukol",
+          "author_email": "sevoku@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/bf825b187a97c29a2044d2cae9b84f27a31fd519",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2681,
+            "title": "update version to 0.27.0-alpha",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2681",
+            "created_at": "2025-05-09T11:01:08Z",
+            "merged_at": "2025-05-09T11:19:50Z",
+            "closed_at": "2025-05-09T11:19:50Z"
+          }
+        },
+        {
+          "sha": "29c19f5da864856fd6a341a4742464c734b6caaa",
+          "message": "Prepare release v0.26.0 (#2674)",
+          "date": "2025-05-09T10:58:21Z",
+          "time": "10:58:21",
+          "author_name": "Vsevolod Kukol",
+          "author_email": "sevoku@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/29c19f5da864856fd6a341a4742464c734b6caaa",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2674,
+            "title": "Prepare release v0.26.0",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2674",
+            "created_at": "2025-05-08T13:11:20Z",
+            "merged_at": "2025-05-09T10:58:22Z",
+            "closed_at": "2025-05-09T10:58:22Z"
+          }
+        }
+      ],
+      "2025-05-07": [
+        {
+          "sha": "a96825113328db75c5f00461e3208da440074f93",
+          "message": "Add an UriHandler to handle external requests to open/attach a specific account and open the Query Editor (#2635)\n\n---------\n\nCo-authored-by: Tomasz Naumowicz <tnaumowicz@microsoft.com>",
+          "date": "2025-05-07T10:29:33Z",
+          "time": "10:29:33",
+          "author_name": "Vsevolod Kukol",
+          "author_email": "sevoku@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/a96825113328db75c5f00461e3208da440074f93",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2635,
+            "title": "Add an UriHandler to handle external requests to open/attach a specific account and open the Query Editor",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2635",
+            "created_at": "2025-03-29T16:56:09Z",
+            "merged_at": "2025-05-07T10:29:33Z",
+            "closed_at": "2025-05-07T10:29:33Z"
+          }
+        }
+      ]
+    },
+    "Dmitry Shilov <dshilov@microsoft.com>": {
+      "2025-05-16": [
+        {
+          "sha": "797287f4f508595f90fd9f210c3ded44fc138cf3",
+          "message": "feat: Add AlertDialog component for confirmation before deleting documents (#2687)",
+          "date": "2025-05-16T07:58:47Z",
+          "time": "07:58:47",
+          "author_name": "Dmitry Shilov",
+          "author_email": "dshilov@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/797287f4f508595f90fd9f210c3ded44fc138cf3",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2687,
+            "title": "feat: Add AlertDialog component for confirmation before deleting documents",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2687",
+            "created_at": "2025-05-14T14:48:53Z",
+            "merged_at": "2025-05-16T07:58:47Z",
+            "closed_at": "2025-05-16T07:58:48Z"
+          }
+        }
+      ],
+      "2025-05-09": [
+        {
+          "sha": "af1673ed6c285f93a32e88bd4f448448dd29918c",
+          "message": "chore: Removes unsafe and outdated dependencies (#2673)",
+          "date": "2025-05-09T10:21:11Z",
+          "time": "10:21:11",
+          "author_name": "Dmitry Shilov",
+          "author_email": "dshilov@microsoft.com",
+          "committer_name": "GitHub",
+          "committer_email": "noreply@github.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/af1673ed6c285f93a32e88bd4f448448dd29918c",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2673,
+            "title": "chore: Removes unsafe and outdated dependencies",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2673",
+            "created_at": "2025-04-29T11:19:49Z",
+            "merged_at": "2025-05-09T10:21:11Z",
+            "closed_at": "2025-05-09T10:21:11Z"
+          }
+        }
+      ]
+    },
+    "Dmitrii Shilov <dshilov@microsoft.com>": {
+      "2025-05-14": [
+        {
+          "sha": "0f6523288ce881fca2f19a1f231f7372578c72ae",
+          "message": "feat: Add AlertDialog component for confirmation before deleting documents",
+          "date": "2025-05-14T14:53:12Z",
+          "time": "14:53:12",
+          "author_name": "Dmitrii Shilov",
+          "author_email": "dshilov@microsoft.com",
+          "committer_name": "Dmitrii Shilov",
+          "committer_email": "dshilov@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/0f6523288ce881fca2f19a1f231f7372578c72ae",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2687,
+            "title": "feat: Add AlertDialog component for confirmation before deleting documents",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2687",
+            "created_at": "2025-05-14T14:48:53Z",
+            "merged_at": "2025-05-16T07:58:47Z",
+            "closed_at": "2025-05-16T07:58:48Z"
+          }
+        },
+        {
+          "sha": "4e861e22af8d98e22e20bcc2d9de06ed4ced3082",
+          "message": "feat: Add AlertDialog component for confirmation before deleting documents",
+          "date": "2025-05-14T14:44:32Z",
+          "time": "14:44:32",
+          "author_name": "Dmitrii Shilov",
+          "author_email": "dshilov@microsoft.com",
+          "committer_name": "Dmitrii Shilov",
+          "committer_email": "dshilov@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/4e861e22af8d98e22e20bcc2d9de06ed4ced3082",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2687,
+            "title": "feat: Add AlertDialog component for confirmation before deleting documents",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2687",
+            "created_at": "2025-05-14T14:48:53Z",
+            "merged_at": "2025-05-16T07:58:47Z",
+            "closed_at": "2025-05-16T07:58:48Z"
+          }
+        }
+      ],
+      "2025-05-07": [
+        {
+          "sha": "61d844d08dfffeca87945006dbc83cd9c99e68b1",
+          "message": "chore: Removes unsafe and outdated dependencies\n- Updates ESLint\n- ESLint and Prettier use modern configuration file\n- Unused eslint comments were removed\n- tsconfig uses ES2023 since Node.js 20.9 fully supports it\n- Updates language server and client\n- Updates slickgrid and styles",
+          "date": "2025-05-07T12:02:22Z",
+          "time": "12:02:22",
+          "author_name": "Dmitrii Shilov",
+          "author_email": "dshilov@microsoft.com",
+          "committer_name": "Dmitrii Shilov",
+          "committer_email": "dshilov@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/61d844d08dfffeca87945006dbc83cd9c99e68b1",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2673,
+            "title": "chore: Removes unsafe and outdated dependencies",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2673",
+            "created_at": "2025-04-29T11:19:49Z",
+            "merged_at": "2025-05-09T10:21:11Z",
+            "closed_at": "2025-05-09T10:21:11Z"
+          }
+        },
+        {
+          "sha": "b99a654c62d8e5084b495dc477f6799cf74710b4",
+          "message": "chore: Removes unsafe and outdated dependencies\n- Updates ESLint\n- ESLint and Prettier use modern configuration file\n- Unused eslint comments were removed\n- tsconfig uses ES2023 since Node.js 20.9 fully supports it\n- Updates language server and client\n- Updates slickgrid and styles",
+          "date": "2025-05-07T11:50:56Z",
+          "time": "11:50:56",
+          "author_name": "Dmitrii Shilov",
+          "author_email": "dshilov@microsoft.com",
+          "committer_name": "Dmitrii Shilov",
+          "committer_email": "dshilov@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/b99a654c62d8e5084b495dc477f6799cf74710b4",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2673,
+            "title": "chore: Removes unsafe and outdated dependencies",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2673",
+            "created_at": "2025-04-29T11:19:49Z",
+            "merged_at": "2025-05-09T10:21:11Z",
+            "closed_at": "2025-05-09T10:21:11Z"
+          }
+        },
+        {
+          "sha": "396629d9f5ac3d69406b4f1457cfb39875bf12fa",
+          "message": "Merge branch 'main' into dev/bk201-/removes-unsafe-deps\n\n# Conflicts:\n#\tpackage.json\n#\tsrc/tree/workspace-api/SharedWorkspaceResourceProvider.ts\n#\tsrc/tree/workspace-view/cosmosdb/LocalEmulators/LocalCoreEmulatorsItem.ts",
+          "date": "2025-05-07T10:41:42Z",
+          "time": "10:41:42",
+          "author_name": "Dmitrii Shilov",
+          "author_email": "dshilov@microsoft.com",
+          "committer_name": "Dmitrii Shilov",
+          "committer_email": "dshilov@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/396629d9f5ac3d69406b4f1457cfb39875bf12fa",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2673,
+            "title": "chore: Removes unsafe and outdated dependencies",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2673",
+            "created_at": "2025-04-29T11:19:49Z",
+            "merged_at": "2025-05-09T10:21:11Z",
+            "closed_at": "2025-05-09T10:21:11Z"
+          }
+        }
+      ]
+    },
+    "Sevo Kukol <sevoku@microsoft.com>": {
+      "2025-05-09": [
+        {
+          "sha": "7e412850cd98c56f6cee6ca39cab9454898c4ce5",
+          "message": "fix: normalize authentication scopes for test environments in getCosmosClient",
+          "date": "2025-05-09T17:57:29Z",
+          "time": "17:57:29",
+          "author_name": "Sevo Kukol",
+          "author_email": "sevoku@microsoft.com",
+          "committer_name": "Sevo Kukol",
+          "committer_email": "sevoku@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/7e412850cd98c56f6cee6ca39cab9454898c4ce5",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2676,
+            "title": "fix: normalize authentication scopes for test environments in getCosmosClient",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2676",
+            "created_at": "2025-05-09T07:50:42Z",
+            "merged_at": "2025-05-19T09:57:29Z",
+            "closed_at": "2025-05-19T09:57:29Z"
+          }
+        },
+        {
+          "sha": "6d1d5125c17b5bd507598e356d528bd0601d1873",
+          "message": "update version to 0.27.0-alpha",
+          "date": "2025-05-09T11:00:49Z",
+          "time": "11:00:49",
+          "author_name": "Sevo Kukol",
+          "author_email": "sevoku@microsoft.com",
+          "committer_name": "Sevo Kukol",
+          "committer_email": "sevoku@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/6d1d5125c17b5bd507598e356d528bd0601d1873",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2681,
+            "title": "update version to 0.27.0-alpha",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2681",
+            "created_at": "2025-05-09T11:01:08Z",
+            "merged_at": "2025-05-09T11:19:50Z",
+            "closed_at": "2025-05-09T11:19:50Z"
+          }
+        }
+      ],
+      "2025-05-08": [
+        {
+          "sha": "78d3f5a3be4262b84bf5ec6ef1c6b39cd87fe93e",
+          "message": "update version to 0.26.0",
+          "date": "2025-05-08T13:09:43Z",
+          "time": "13:09:43",
+          "author_name": "Sevo Kukol",
+          "author_email": "sevoku@microsoft.com",
+          "committer_name": "Sevo Kukol",
+          "committer_email": "sevoku@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/78d3f5a3be4262b84bf5ec6ef1c6b39cd87fe93e",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2674,
+            "title": "Prepare release v0.26.0",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2674",
+            "created_at": "2025-05-08T13:11:20Z",
+            "merged_at": "2025-05-09T10:58:22Z",
+            "closed_at": "2025-05-09T10:58:22Z"
+          }
+        },
+        {
+          "sha": "1abcbfa0d82812911017a7e004b8048cb3528cb5",
+          "message": "chore: update CHANGELOG for version 0.26.0 with new features and improvements",
+          "date": "2025-05-08T13:09:09Z",
+          "time": "13:09:09",
+          "author_name": "Sevo Kukol",
+          "author_email": "sevoku@microsoft.com",
+          "committer_name": "Sevo Kukol",
+          "committer_email": "sevoku@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/1abcbfa0d82812911017a7e004b8048cb3528cb5",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2674,
+            "title": "Prepare release v0.26.0",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2674",
+            "created_at": "2025-05-08T13:11:20Z",
+            "merged_at": "2025-05-09T10:58:22Z",
+            "closed_at": "2025-05-09T10:58:22Z"
+          }
+        }
+      ],
+      "2025-05-07": [
+        {
+          "sha": "051dc18f0a32d7e7ab55fe7e148e60c2af8c8e0b",
+          "message": "fix: improve provider check to be case-insensitive",
+          "date": "2025-05-07T09:49:12Z",
+          "time": "09:49:12",
+          "author_name": "Sevo Kukol",
+          "author_email": "sevoku@microsoft.com",
+          "committer_name": "Sevo Kukol",
+          "committer_email": "sevoku@microsoft.com",
+          "url": "https://github.com/microsoft/vscode-cosmosdb/commit/051dc18f0a32d7e7ab55fe7e148e60c2af8c8e0b",
+          "additions": 0,
+          "deletions": 0,
+          "total_changes": 0,
+          "files_changed": 0,
+          "associated_pr": {
+            "number": 2635,
+            "title": "Add an UriHandler to handle external requests to open/attach a specific account and open the Query Editor",
+            "state": "closed",
+            "merged": true,
+            "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2635",
+            "created_at": "2025-03-29T16:56:09Z",
+            "merged_at": "2025-05-07T10:29:33Z",
+            "closed_at": "2025-05-07T10:29:33Z"
+          }
+        }
+      ]
+    }
+  },
+  "user_stats": {
+    "Tomasz Naumowicz <tnaumowicz@microsoft.com>": {
+      "total_commits": 14,
+      "total_additions": 0,
+      "total_deletions": 0,
+      "commits_with_pr": 14,
+      "commits_without_pr": 0,
+      "pr_percentage": 100.0,
+      "active_days": 6,
+      "first_commit": "2025-05-02",
+      "last_commit": "2025-05-26"
+    },
+    "Mike Krüger <mikkrg@microsoft.com>": {
+      "total_commits": 17,
+      "total_additions": 0,
+      "total_deletions": 0,
+      "commits_with_pr": 17,
+      "commits_without_pr": 0,
+      "pr_percentage": 100.0,
+      "active_days": 5,
+      "first_commit": "2025-05-08",
+      "last_commit": "2025-05-22"
+    },
+    "copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>": {
+      "total_commits": 5,
+      "total_additions": 0,
+      "total_deletions": 0,
+      "commits_with_pr": 5,
+      "commits_without_pr": 0,
+      "pr_percentage": 100.0,
+      "active_days": 1,
+      "first_commit": "2025-05-21",
+      "last_commit": "2025-05-21"
+    },
+    "Vsevolod Kukol <sevoku@microsoft.com>": {
+      "total_commits": 4,
+      "total_additions": 0,
+      "total_deletions": 0,
+      "commits_with_pr": 4,
+      "commits_without_pr": 0,
+      "pr_percentage": 100.0,
+      "active_days": 3,
+      "first_commit": "2025-05-07",
+      "last_commit": "2025-05-19"
+    },
+    "Dmitry Shilov <dshilov@microsoft.com>": {
+      "total_commits": 2,
+      "total_additions": 0,
+      "total_deletions": 0,
+      "commits_with_pr": 2,
+      "commits_without_pr": 0,
+      "pr_percentage": 100.0,
+      "active_days": 2,
+      "first_commit": "2025-05-09",
+      "last_commit": "2025-05-16"
+    },
+    "Dmitrii Shilov <dshilov@microsoft.com>": {
+      "total_commits": 5,
+      "total_additions": 0,
+      "total_deletions": 0,
+      "commits_with_pr": 5,
+      "commits_without_pr": 0,
+      "pr_percentage": 100.0,
+      "active_days": 2,
+      "first_commit": "2025-05-07",
+      "last_commit": "2025-05-14"
+    },
+    "Sevo Kukol <sevoku@microsoft.com>": {
+      "total_commits": 5,
+      "total_additions": 0,
+      "total_deletions": 0,
+      "commits_with_pr": 5,
+      "commits_without_pr": 0,
+      "pr_percentage": 100.0,
+      "active_days": 3,
+      "first_commit": "2025-05-07",
+      "last_commit": "2025-05-09"
+    }
+  }
+}

@@ -1,0 +1,2511 @@
+{
+  "repository": "microsoft/vscode-cosmosdb",
+  "extracted_at": "2025-06-01T03:38:06.651597",
+  "timeframe": {
+    "days_back": 30,
+    "from_date": "2025-05-02T07:36:04.241783+00:00",
+    "to_date": "2025-06-01T07:38:06.651631+00:00"
+  },
+  "total_prs": 21,
+  "pull_requests": [
+    {
+      "number": 2696,
+      "title": "Re-insert the node on refresh in BaseCachedBranchDataProvider",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "Copilot",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-21T08:47:28Z",
+        "updated_at": "2025-05-26T10:12:33Z",
+        "closed_at": "2025-05-26T10:12:31Z",
+        "merged_at": "2025-05-26T10:12:31Z",
+        "duration_hours": 121.42,
+        "duration_days": 5.06,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "## What's Changed\n\nThis PR fixes the caching issue in the tree view where stale references can occur during the refresh operation. When a tree node is modified through operations like `ext.state.runWithTemporaryDescription`, the references kept by other parts of the code (such as commands) would become stale because the node was removed from the cache but not re-inserted.\n\nThe fix modifies the `refresh` method in `BaseCachedBranchDataProvider` to:\n1. Clear the cache for the node ID (removing the element and its children)\n2. Re-register the node itself (but not its children) in the cache\n\nThis ensures that any external references to the node remain valid after a refresh operation.\n\n```typescript\nrefresh(element?: TreeElement): void {\n    if (element?.id) {\n        // 1. Clear the cache for this ID to remove any stale references\n        // (drops the element and its children)\n        this.pruneCache(element.id);\n        \n        // 2. Re-register the node (but not its children)\n        // This ensures any references to this node are still valid\n        if (element.id) {\n            this.nodeCache.set(element.id, element);\n        }\n    } else {\n        this.nodeCache.clear();\n        this.childToParentMap.clear();\n    }\n\n    this.onDidChangeTreeDataEmitter.fire(element);\n}\n```\n\nThis approach follows the pattern used in vscode-documentdb's `ConnectionsBranchDataProvider`, which solves a similar issue.\n\nFixes #2694.\n\n---\n\n💡 You can make Copilot smarter by setting up custom instructions, customizing its development environment and configuring Model Context Protocol (MCP) servers. Learn more [Copilot coding agent tips](https://gh.io/copilot-coding-agent-tips) in the docs.",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2696",
+        "labels": [],
+        "assignees": [
+          "tnaum-ms",
+          "Copilot"
+        ],
+        "reviewers": [
+          "tnaum-ms"
+        ],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "assigned",
+          "created_at": "2025-05-21T08:47:29Z",
+          "actor": "Copilot",
+          "assignee": "Copilot"
+        },
+        {
+          "event": "assigned",
+          "created_at": "2025-05-21T08:47:29Z",
+          "actor": "Copilot",
+          "assignee": "tnaum-ms"
+        },
+        {
+          "event": "copilot_work_started",
+          "created_at": "2025-05-21T08:47:31Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "renamed",
+          "created_at": "2025-05-21T08:58:08Z",
+          "actor": "Copilot"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T08:58:09Z",
+          "actor": "Copilot"
+        },
+        {
+          "event": "copilot_work_finished",
+          "created_at": "2025-05-21T08:58:16Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-21T10:30:01Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-21T14:31:07Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "mentioned",
+          "created_at": "2025-05-21T14:31:08Z",
+          "actor": "Copilot"
+        },
+        {
+          "event": "subscribed",
+          "created_at": "2025-05-21T14:31:08Z",
+          "actor": "Copilot"
+        },
+        {
+          "event": "copilot_work_started",
+          "created_at": "2025-05-21T14:31:11Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-21T14:36:32Z",
+          "actor": "Copilot"
+        },
+        {
+          "event": "mentioned",
+          "created_at": "2025-05-21T14:36:34Z",
+          "actor": "Copilot"
+        },
+        {
+          "event": "subscribed",
+          "created_at": "2025-05-21T14:36:34Z",
+          "actor": "Copilot"
+        },
+        {
+          "event": "copilot_work_finished",
+          "created_at": "2025-05-21T14:37:38Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-21T15:19:45Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "mentioned",
+          "created_at": "2025-05-21T15:19:46Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "subscribed",
+          "created_at": "2025-05-21T15:19:46Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "ready_for_review",
+          "created_at": "2025-05-21T15:21:14Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T15:21:14Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T15:21:32Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-26T10:12:31Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-26T10:12:31Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-26T10:12:33Z",
+          "actor": "tnaum-ms"
+        }
+      ]
+    },
+    {
+      "number": 2698,
+      "title": "Update launchShell command to support different shell environments on Windows",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "Copilot",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-21T11:54:30Z",
+        "updated_at": "2025-05-26T10:12:08Z",
+        "closed_at": "2025-05-26T10:12:05Z",
+        "merged_at": "2025-05-26T10:12:05Z",
+        "duration_hours": 118.29,
+        "duration_days": 4.93,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This PR updates the `launchShell` command to ensure compatibility with different terminal environments on Windows. The implementation is based on the approach used in the vscode-documentdb repository, which provides better support for various terminal types.\n\n## Improvements\n\n### Terminal Detection\n- Added robust detection for various terminal types on Windows:\n  - PowerShell/pwsh\n  - Command Prompt (cmd)\n  - Git Bash\n  - WSL\n- Fallback handling for undefined terminal profiles\n- Added logging for terminal detection\n\n### Environment Variable Handling\n- Implemented appropriate environment variable syntax based on the shell type:\n  - PowerShell: `$env:VAR_NAME`\n  - CMD: `%VAR_NAME%`\n  - Unix/Git Bash/WSL: `$VAR_NAME`\n- Used unique environment variables with random suffixes to avoid conflicts\n\n### Security Enhancements\n- Implemented a password sentinel approach to avoid URL encoding issues with environment variable references\n- Used `valuesToMask` to prevent sensitive values from appearing in logs\n- Used generic-looking environment variable names to avoid drawing attention in the terminal output\n\n### Telemetry Improvements\n- Added terminal type information to telemetry properties\n- Added Windows platform information\n\nThis change ensures MongoDB shell commands work correctly regardless of the user's preferred terminal on Windows, resolving compatibility issues with PowerShell and other shells.\n\nFixes #2697.\n\n---\n\n💡 You can make Copilot smarter by setting up custom instructions, customizing its development environment and configuring Model Context Protocol (MCP) servers. Learn more [Copilot coding agent tips](https://gh.io/copilot-coding-agent-tips) in the docs.",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2698",
+        "labels": [],
+        "assignees": [
+          "tnaum-ms",
+          "Copilot"
+        ],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "assigned",
+          "created_at": "2025-05-21T11:54:31Z",
+          "actor": "Copilot",
+          "assignee": "Copilot"
+        },
+        {
+          "event": "assigned",
+          "created_at": "2025-05-21T11:54:31Z",
+          "actor": "Copilot",
+          "assignee": "tnaum-ms"
+        },
+        {
+          "event": "copilot_work_started",
+          "created_at": "2025-05-21T11:54:33Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "renamed",
+          "created_at": "2025-05-21T12:05:26Z",
+          "actor": "Copilot"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T12:05:27Z",
+          "actor": "Copilot"
+        },
+        {
+          "event": "copilot_work_finished",
+          "created_at": "2025-05-21T12:05:34Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "cross-referenced",
+          "created_at": "2025-05-21T14:15:49Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-21T14:17:24Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "mentioned",
+          "created_at": "2025-05-21T14:17:25Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "subscribed",
+          "created_at": "2025-05-21T14:17:25Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "ready_for_review",
+          "created_at": "2025-05-21T14:18:20Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T14:18:20Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T14:18:46Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T14:25:18Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-26T10:12:05Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-26T10:12:06Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-26T10:12:08Z",
+          "actor": "tnaum-ms"
+        }
+      ]
+    },
+    {
+      "number": 2693,
+      "title": "Fix issue #2663: Improve arial labels for \"Learn more…\" links.",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "mkrueger",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-19T08:38:06Z",
+        "updated_at": "2025-05-22T07:03:05Z",
+        "closed_at": "2025-05-22T07:03:03Z",
+        "merged_at": "2025-05-22T07:03:03Z",
+        "duration_hours": 70.42,
+        "duration_days": 2.93,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This pull request adds more descriptive text for \"Learn more\" links and updating the localization file to support these changes.\r\n\r\n### Localization improvements:\r\n* [`l10n/bundle.l10n.json`](diffhunk://#diff-829b512e02461234524c007941f3260e67a43b109f48bedf257ab8e8033cc527R350-R351): Added new localized strings for \"Learn more about index metrics…\" and \"Learn more about query metrics…\" to provide more descriptive context for links.\r\n\r\n### Accessibility enhancements:\r\n* [`src/webviews/cosmosdb/QueryEditor/ResultPanel/IndexMetricsView.tsx`](diffhunk://#diff-5b0779b73027ea1cf9f5fff462b9b46d635305f2981fa81eacad0a46f651a9fcL44-R47): Updated the \"Learn more\" link for index metrics to include an `aria-label` with a more descriptive message, improving accessibility.\r\n* [`src/webviews/cosmosdb/QueryEditor/ResultPanel/StatsTab.tsx`](diffhunk://#diff-4b01f3f72965fa3a085d8f69779b5b9c633c6478a15b1ac880fe05937dacdbccL82-R85): Updated the \"Learn more\" link for query metrics to include an `aria-label` with a more descriptive message, improving accessibility.",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2693",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-19T08:38:06Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-22T07:03:03Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-22T07:03:03Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-22T07:03:05Z",
+          "actor": "mkrueger"
+        }
+      ]
+    },
+    {
+      "number": 2656,
+      "title": "Fixed `Previously attached MongoDB RU accounts get lost` #2649",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "tnaum-ms",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-04-21T16:06:36Z",
+        "updated_at": "2025-05-21T15:55:16Z",
+        "closed_at": "2025-05-21T15:55:14Z",
+        "merged_at": "2025-05-21T15:55:14Z",
+        "duration_hours": 719.81,
+        "duration_days": 29.99,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This pull request adds migration support for Cosmos DB accounts with the MongoDB API. It improves the handling of legacy account data.\r\n\r\nThe new migration code is enclosed in the function `postPickSupportedAccountsCleanUp` that corrects the storage location of `MongoDB` and `MongoClusters` storage items.\r\n\r\nAdditional work has been done around refactoring. The migration code is now located in one file. This file should be deleted \"in a couple of releases\" once we assume the migration to be completed.\r\n\r\nFixes #2649\r\n\r\n---\r\n\r\nCopilot:\r\n\r\n### Migration Functions and Logic:\r\n* Added `pickSupportedAccounts`, `postPickSupportedAccountsCleanUp`, and `migrateV1AccountsToV2` functions in `src/tree/workspace-view/accountMigration.ts` to handle account migration from the old storage format to the new one and address specific migration issues. These functions include telemetry tracking and error handling.\r\n\r\n### Integration with Existing Code:\r\n* Updated `CosmosDBWorkspaceItem` and `AccountsItem` classes to invoke the new `postPickSupportedAccountsCleanUp` function during their `getChildren` operations to ensure migration cleanup is performed. [[1]](diffhunk://#diff-cf6d3da44f4b070f01120d733271e4c4ac530186686f1552037dc2ddd6a92ba0L33-R34) [[2]](diffhunk://#diff-94fcc8580d360348f99bf67a185b3f7aa23948fc211130e9730a0068d35a36a7R29-R31)\r\n\r\n### Code Simplification:\r\n* Removed redundant `pickSupportedAccounts` and `migrateV1AccountsToV2` methods from `CosmosDBWorkspaceItem` after moving their logic into the new `accountMigration.ts` file for better modularity.\r\n\r\n### Refactoring:\r\n* Adjusted imports in `CosmosDBWorkspaceItem.ts` and `AccountsItem.ts` to use the new migration functions from `accountMigration.ts`. [[1]](diffhunk://#diff-cf6d3da44f4b070f01120d733271e4c4ac530186686f1552037dc2ddd6a92ba0L6-R18) [[2]](diffhunk://#diff-94fcc8580d360348f99bf67a185b3f7aa23948fc211130e9730a0068d35a36a7R14)",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2656",
+        "labels": [],
+        "assignees": [
+          "tnaum-ms"
+        ],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "connected",
+          "created_at": "2025-04-21T16:06:37Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-04-21T16:07:00Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "ready_for_review",
+          "created_at": "2025-04-21T16:11:55Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-04-21T16:11:55Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "dismissed"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-07T14:49:14Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "convert_to_draft",
+          "created_at": "2025-05-08T10:48:23Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_dismissed",
+          "created_at": "2025-05-21T14:53:18Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T14:54:04Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "assigned",
+          "created_at": "2025-05-21T14:55:38Z",
+          "actor": "tnaum-ms",
+          "assignee": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "ready_for_review",
+          "created_at": "2025-05-21T15:10:34Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-21T15:11:12Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "mentioned",
+          "created_at": "2025-05-21T15:11:14Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "subscribed",
+          "created_at": "2025-05-21T15:11:14Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T15:11:27Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-21T15:55:14Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-21T15:55:14Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-21T15:55:16Z",
+          "actor": "tnaum-ms"
+        }
+      ]
+    },
+    {
+      "number": 2685,
+      "title": "FIX: adds support for launching `mongosh` when the user work with PS on Windows",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "tnaum-ms",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-13T17:02:30Z",
+        "updated_at": "2025-05-21T14:15:48Z",
+        "closed_at": "2025-05-21T14:15:47Z",
+        "merged_at": null,
+        "duration_hours": 189.22,
+        "duration_days": 7.88,
+        "status": "closed"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This pull request updates the `launchShell` command to ensure compatibility with different terminal environments on Windows. The main change introduces logic to correctly handle environment variable syntax based on whether the terminal is PowerShell or another shell.\r\n\r\n### Compatibility improvements for Windows terminals:\r\n\r\n* [`src/commands/launchShell/launchShell.ts`](diffhunk://#diff-eab2a39f022b72c2579c2a4745ffc8ca8a1dd5194daf877365d63520bc8f0465L58-R74): Added a check to determine if the terminal is PowerShell (`PowerShell` or `pwsh`) and updated the `username` and `password` variable syntax accordingly. PowerShell now uses `$env:USERNAME` and `$env:PASSWORD`, while other Windows shells continue to use `%USERNAME%` and `%PASSWORD%`.",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2685",
+        "labels": [
+          "MongoDB Clusters"
+        ],
+        "assignees": [],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-13T17:02:30Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "labeled",
+          "created_at": "2025-05-13T17:03:00Z",
+          "actor": "tnaum-ms",
+          "label": "MongoDB Clusters"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "assigned",
+          "created_at": "2025-05-21T11:38:37Z",
+          "actor": "tnaum-ms",
+          "assignee": "tnaum-ms"
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-21T11:50:11Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "unassigned",
+          "created_at": "2025-05-21T11:50:28Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "cross-referenced",
+          "created_at": "2025-05-21T11:54:26Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "cross-referenced",
+          "created_at": "2025-05-21T11:54:31Z",
+          "actor": "Copilot"
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-21T14:15:47Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-21T14:15:47Z",
+          "actor": "tnaum-ms"
+        }
+      ]
+    },
+    {
+      "number": 2676,
+      "title": "fix: normalize authentication scopes for test environments in getCosmosClient",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "sevoku",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-09T07:50:42Z",
+        "updated_at": "2025-05-19T09:57:30Z",
+        "closed_at": "2025-05-19T09:57:29Z",
+        "merged_at": "2025-05-19T09:57:29Z",
+        "duration_hours": 242.11,
+        "duration_days": 10.09,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": null,
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2676",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-09T07:50:43Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "dismissed"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-09T17:53:22Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "head_ref_force_pushed",
+          "created_at": "2025-05-09T17:53:22Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "reopened",
+          "created_at": "2025-05-09T17:58:54Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "review_dismissed",
+          "created_at": "2025-05-09T17:58:55Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-09T17:59:17Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "head_ref_force_pushed",
+          "created_at": "2025-05-09T22:00:55Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "renamed",
+          "created_at": "2025-05-09T22:01:20Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-19T09:57:29Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-19T09:57:29Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-19T09:57:30Z",
+          "actor": "sevoku"
+        }
+      ]
+    },
+    {
+      "number": 2679,
+      "title": "Fix issue #2665: Update ResultTab.tsx to improve query result l10n reporting.",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "mkrueger",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-09T08:43:30Z",
+        "updated_at": "2025-05-16T09:01:38Z",
+        "closed_at": "2025-05-16T09:01:36Z",
+        "merged_at": "2025-05-16T09:01:36Z",
+        "duration_hours": 168.3,
+        "duration_days": 7.01,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This pull request enhances the `ResultTab` component in the Cosmos DB Query Editor by improving accessibility and adding functionality to announce the query result count after completing the query.\r\n\r\n### Accessibility Improvements:\r\n* Added a visually hidden `screenReaderOnly` CSS class to support screen reader accessibility. This class ensures that certain elements are accessible to assistive technologies but hidden from visual users. (`src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTab.tsx`, [src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTab.tsxR29-R39](diffhunk://#diff-57e31d954677514ea8448ec02d1e0f53dd6b12315075809ec5e3e81df994aae9R29-R39))\r\n* Introduced an ARIA live region to announce the query result count when loading completes, improving accessibility for screen reader users. (`src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTab.tsx`, [src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTab.tsxR109-R145](diffhunk://#diff-57e31d954677514ea8448ec02d1e0f53dd6b12315075809ec5e3e81df994aae9R109-R145))\r\n\r\n### Functional Enhancements:\r\n* Added a `resultCount` state and logic to calculate the number of results based on the current view mode (Table, Tree, or JSON). This ensures accurate result counts are displayed dynamically. (`src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTab.tsx`, [src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTab.tsxR109-R145](diffhunk://#diff-57e31d954677514ea8448ec02d1e0f53dd6b12315075809ec5e3e81df994aae9R109-R145))\r\n* Used a `useRef` (`previousLoadingState`) to track the previous loading state and trigger result count updates only when loading transitions from active to complete. (`src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTab.tsx`, [src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTab.tsxR53-R54](diffhunk://#diff-57e31d954677514ea8448ec02d1e0f53dd6b12315075809ec5e3e81df994aae9R53-R54))\r\n\r\n### Code Updates:\r\n* Imported `useRef` from React to manage the `previousLoadingState` for tracking loading transitions. (`src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTab.tsx`, [src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTab.tsxL8-R8](diffhunk://#diff-57e31d954677514ea8448ec02d1e0f53dd6b12315075809ec5e3e81df994aae9L8-R8))",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2679",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [
+          "bk201-"
+        ],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-09T08:43:31Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "dismissed"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_dismissed",
+          "created_at": "2025-05-12T08:41:55Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-12T09:00:44Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-12T09:00:44Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-12T09:00:57Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-16T09:01:36Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-16T09:01:36Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-16T09:01:38Z",
+          "actor": "mkrueger"
+        }
+      ]
+    },
+    {
+      "number": 2687,
+      "title": "feat: Add AlertDialog component for confirmation before deleting documents",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "bk201-",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-14T14:48:53Z",
+        "updated_at": "2025-05-16T07:58:50Z",
+        "closed_at": "2025-05-16T07:58:48Z",
+        "merged_at": "2025-05-16T07:58:47Z",
+        "duration_hours": 41.16,
+        "duration_days": 1.72,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This pull request introduces a reusable `AlertDialog` component and integrates it into various parts of the CosmosDB Query Editor. The changes improve code reusability, simplify dialog management, and enhance the user experience by standardizing alert dialogs. Below are the key changes grouped by theme:\r\n\r\n### New `AlertDialog` Component\r\n* Added a new `AlertDialog` component in `src/webviews/common/AlertDialog.tsx`. This component is a reusable, customizable modal dialog for confirmation prompts, supporting configurable titles, content, and button order.\r\n\r\n### Refactoring to Use `AlertDialog`\r\n* Replaced the inline `AlertDialog` implementation in `src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultPanelToolbarOverflow.tsx` with the new reusable `AlertDialog` component. Updated dialog-related props (`setOpen`/`setDoAction`) to `setIsOpen`/`setAction` for better clarity. [[1]](diffhunk://#diff-c128b1a5dade1fa53b33a1df356e88d39834d06b5b8fd9057153d56a4005c078L9-L15) [[2]](diffhunk://#diff-c128b1a5dade1fa53b33a1df356e88d39834d06b5b8fd9057153d56a4005c078L49-R50) [[3]](diffhunk://#diff-c128b1a5dade1fa53b33a1df356e88d39834d06b5b8fd9057153d56a4005c078L593-L604) [[4]](diffhunk://#diff-c128b1a5dade1fa53b33a1df356e88d39834d06b5b8fd9057153d56a4005c078L668-R657)\r\n* Integrated the new `AlertDialog` component into `ResultTabToolbar` in `src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTabToolbar.tsx` to handle delete confirmation dialogs. Added state and handlers for dialog visibility and actions. [[1]](diffhunk://#diff-5cdf9f37b21ee76f767b33bc6d49af1c805250506c1d46eedb89dea7e5ea64bbL10-R12) [[2]](diffhunk://#diff-5cdf9f37b21ee76f767b33bc6d49af1c805250506c1d46eedb89dea7e5ea64bbR27-R82) [[3]](diffhunk://#diff-5cdf9f37b21ee76f767b33bc6d49af1c805250506c1d46eedb89dea7e5ea64bbL95-R124)\r\n\r\n### Code Simplification\r\n* Removed the old inline `AlertDialog` implementation and associated state management logic from `ResultPanelToolbarOverflow`. This reduces redundancy and centralizes dialog functionality. [[1]](diffhunk://#diff-c128b1a5dade1fa53b33a1df356e88d39834d06b5b8fd9057153d56a4005c078L49-R50) [[2]](diffhunk://#diff-c128b1a5dade1fa53b33a1df356e88d39834d06b5b8fd9057153d56a4005c078L618-R573)\r\n* Updated various button components (`ReloadQueryButton`, `ChangePageSizeButton`) to use the new dialog props (`setIsOpen`/`setAction`) for consistency. [[1]](diffhunk://#diff-c128b1a5dade1fa53b33a1df356e88d39834d06b5b8fd9057153d56a4005c078L102-R66) [[2]](diffhunk://#diff-c128b1a5dade1fa53b33a1df356e88d39834d06b5b8fd9057153d56a4005c078L260-R219) [[3]](diffhunk://#diff-c128b1a5dade1fa53b33a1df356e88d39834d06b5b8fd9057153d56a4005c078L269-R229) [[4]](diffhunk://#diff-c128b1a5dade1fa53b33a1df356e88d39834d06b5b8fd9057153d56a4005c078L690-R670) [[5]](diffhunk://#diff-c128b1a5dade1fa53b33a1df356e88d39834d06b5b8fd9057153d56a4005c078L703-R683)\r\n\r\n### Enhanced User Experience\r\n* Standardized confirmation dialogs across the Query Editor using the new `AlertDialog` component, ensuring a consistent look and feel. For example, the delete confirmation dialog in `ResultTabToolbar` now uses the same design as other dialogs. [[1]](diffhunk://#diff-5cdf9f37b21ee76f767b33bc6d49af1c805250506c1d46eedb89dea7e5ea64bbL10-R12) [[2]](diffhunk://#diff-5cdf9f37b21ee76f767b33bc6d49af1c805250506c1d46eedb89dea7e5ea64bbL95-R124) [[3]](diffhunk://#diff-5cdf9f37b21ee76f767b33bc6d49af1c805250506c1d46eedb89dea7e5ea64bbR161)\r\n\r\nThese changes improve maintainability, consistency, and user experience across the CosmosDB Query Editor.",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2687",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-14T14:48:54Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-14T14:49:14Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-14T15:02:35Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "mentioned",
+          "created_at": "2025-05-14T15:02:36Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "subscribed",
+          "created_at": "2025-05-14T15:02:36Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-14T16:54:12Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "mentioned",
+          "created_at": "2025-05-14T16:54:14Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "subscribed",
+          "created_at": "2025-05-14T16:54:14Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-16T07:58:47Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-16T07:58:48Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-16T07:58:50Z",
+          "actor": "bk201-"
+        }
+      ]
+    },
+    {
+      "number": 2684,
+      "title": "insert with buffer",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "xingfan-msft",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-12T09:52:36Z",
+        "updated_at": "2025-05-15T05:33:36Z",
+        "closed_at": "2025-05-15T05:33:23Z",
+        "merged_at": null,
+        "duration_hours": 67.68,
+        "duration_days": 2.82,
+        "status": "closed"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": null,
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2684",
+        "labels": [],
+        "assignees": [
+          "tnaum-ms"
+        ],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-12T09:52:37Z",
+          "actor": "xingfan-msft"
+        },
+        {
+          "event": "mentioned",
+          "created_at": "2025-05-12T09:52:57Z",
+          "actor": "xingfan-msft"
+        },
+        {
+          "event": "subscribed",
+          "created_at": "2025-05-12T09:52:58Z",
+          "actor": "xingfan-msft"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-12T09:57:52Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "assigned",
+          "created_at": "2025-05-12T09:57:54Z",
+          "actor": "tnaum-ms",
+          "assignee": "tnaum-ms"
+        },
+        {
+          "event": "mentioned",
+          "created_at": "2025-05-12T09:58:14Z",
+          "actor": "xingfan-msft"
+        },
+        {
+          "event": "subscribed",
+          "created_at": "2025-05-12T09:58:15Z",
+          "actor": "xingfan-msft"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "changes_requested"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-13T08:38:48Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-15T05:33:24Z",
+          "actor": "xingfan-git"
+        }
+      ]
+    },
+    {
+      "number": 2680,
+      "title": "Fix issue #2668: Corrected screen reader button announcement in ResultTabToolbar",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "mkrueger",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-09T08:46:21Z",
+        "updated_at": "2025-05-12T08:40:32Z",
+        "closed_at": "2025-05-12T08:40:30Z",
+        "merged_at": "2025-05-12T08:40:30Z",
+        "duration_hours": 71.9,
+        "duration_days": 3.0,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This pull request includes a minor change to the `ResultTabToolbar` component in the `ResultPanel` of the CosmosDB Query Editor. The `aria-label` attribute was removed from the `Toolbar` component fixing the not needed double announcement. Just the button text should be read.\r\n\r\n* [`src/webviews/cosmosdb/QueryEditor/ResultPanel/ResultTabToolbar.tsx`](diffhunk://#diff-5cdf9f37b21ee76f767b33bc6d49af1c805250506c1d46eedb89dea7e5ea64bbL54-R54): Removed the `aria-label` attribute (`l10n.t('Result view toolbar')`) from the `Toolbar` component.",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2680",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [
+          "sevoku"
+        ],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-09T08:46:22Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-09T08:46:22Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-12T08:40:30Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-12T08:40:30Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-12T08:40:32Z",
+          "actor": "mkrueger"
+        }
+      ]
+    },
+    {
+      "number": 2678,
+      "title": "Fix issue #2661: Resolve l10n issue in QueryPanel",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "mkrueger",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-09T08:41:18Z",
+        "updated_at": "2025-05-12T08:40:18Z",
+        "closed_at": "2025-05-12T08:40:16Z",
+        "merged_at": "2025-05-12T08:40:16Z",
+        "duration_hours": 71.98,
+        "duration_days": 3.0,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This pull request includes a minor change to the `DuplicateTabButton` component in the `QueryToolbarOverflow` file. The `aria-label` for the button was updated to improve clarity and consistency.\r\n\r\n* [`src/webviews/cosmosdb/QueryEditor/QueryPanel/QueryToolbarOverflow.tsx`](diffhunk://#diff-b1f4c6160d06097fa41d9e2563c8650bec9c7f6610309f984aa82e1c8b49e5b9L195-R195): Updated the `aria-label` of the `DuplicateTabButton` from `'Copy into new tab'` to `'Duplicate'`.",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2678",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [
+          "sevoku"
+        ],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-09T08:41:18Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-09T08:41:18Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-12T08:40:16Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-12T08:40:16Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-12T08:40:18Z",
+          "actor": "mkrueger"
+        }
+      ]
+    },
+    {
+      "number": 2677,
+      "title": "Fix issue #2660: Resolve l10n issue in QueryPanel run button menu.",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "mkrueger",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-09T08:38:48Z",
+        "updated_at": "2025-05-12T08:39:40Z",
+        "closed_at": "2025-05-12T08:39:38Z",
+        "merged_at": "2025-05-12T08:39:38Z",
+        "duration_hours": 72.01,
+        "duration_days": 3.0,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This pull request makes a small but meaningful change to improve accessibility in the `RunQueryButton` component. Specifically, it adds an `aria-label` to the `menuButton` to provide a more descriptive label for screen readers.\r\n\r\n* [`src/webviews/cosmosdb/QueryEditor/QueryPanel/QueryToolbarOverflow.tsx`](diffhunk://#diff-b1f4c6160d06097fa41d9e2563c8650bec9c7f6610309f984aa82e1c8b49e5b9L90-R93): Updated the `menuButton` props in the `RunQueryButton` component to include an `aria-label` with the text \"Show history of previous queries\" for better accessibility.",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2677",
+        "labels": [],
+        "assignees": [
+          "sevoku"
+        ],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "assigned",
+          "created_at": "2025-05-09T08:38:48Z",
+          "actor": "mkrueger",
+          "assignee": "sevoku"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-09T08:38:48Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-12T08:39:38Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-12T08:39:38Z",
+          "actor": "mkrueger"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-12T08:39:40Z",
+          "actor": "mkrueger"
+        }
+      ]
+    },
+    {
+      "number": 2683,
+      "title": "fix: update scope handling for Fabric credentials in getCosmosClient",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "sevoku",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-09T17:58:06Z",
+        "updated_at": "2025-05-09T17:58:44Z",
+        "closed_at": "2025-05-09T17:58:44Z",
+        "merged_at": null,
+        "duration_hours": 0.01,
+        "duration_days": 0.0,
+        "status": "closed"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": null,
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2683",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-09T17:58:07Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-09T17:58:44Z",
+          "actor": "sevoku"
+        }
+      ]
+    },
+    {
+      "number": 2681,
+      "title": "update version to 0.27.0-alpha",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "sevoku",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-09T11:01:08Z",
+        "updated_at": "2025-05-09T11:19:52Z",
+        "closed_at": "2025-05-09T11:19:50Z",
+        "merged_at": "2025-05-09T11:19:50Z",
+        "duration_hours": 0.31,
+        "duration_days": 0.01,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": null,
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2681",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-09T11:01:09Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-09T11:19:50Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-09T11:19:51Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-09T11:19:52Z",
+          "actor": "sevoku"
+        }
+      ]
+    },
+    {
+      "number": 2674,
+      "title": "Prepare release v0.26.0",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "sevoku",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-08T13:11:20Z",
+        "updated_at": "2025-05-09T10:58:24Z",
+        "closed_at": "2025-05-09T10:58:22Z",
+        "merged_at": "2025-05-09T10:58:22Z",
+        "duration_hours": 21.78,
+        "duration_days": 0.91,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": null,
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2674",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-08T13:11:21Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-09T10:58:22Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-09T10:58:22Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-09T10:58:24Z",
+          "actor": "sevoku"
+        }
+      ]
+    },
+    {
+      "number": 2673,
+      "title": "chore: Removes unsafe and outdated dependencies",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "bk201-",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-04-29T11:19:49Z",
+        "updated_at": "2025-05-09T10:21:13Z",
+        "closed_at": "2025-05-09T10:21:11Z",
+        "merged_at": "2025-05-09T10:21:11Z",
+        "duration_hours": 239.02,
+        "duration_days": 9.96,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "- Updates ESLint\r\n- ESLint and Prettier use modern configuration file\r\n- Unused eslint comments were removed\r\n- tsconfig uses ES2023 since Node.js 20.9 fully supports it\r\n- Updates language server and client\r\n- Updates slickgrid and styles\r\n\r\n\r\n![image](https://github.com/user-attachments/assets/6aeb9f4f-2b63-4d12-8c87-b3f21b36db0e)\r\n\r\n- React can't be updated until fluent-ui moves to the React 19\r\n- VScode + Monaco can't be updated since we have to support old version\r\n- test library can't be updated since has stubs for minimal supported VSCode version\r\n",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2673",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-04-29T11:19:50Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-04-29T11:33:00Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        },
+        {
+          "event": "merged",
+          "created_at": "2025-05-09T10:21:11Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "closed",
+          "created_at": "2025-05-09T10:21:11Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "head_ref_deleted",
+          "created_at": "2025-05-09T10:21:13Z",
+          "actor": "bk201-"
+        }
+      ]
+    },
+    {
+      "number": 2635,
+      "title": "Add an UriHandler to handle external requests to open/attach a specific account and open the Query Editor",
+      "state": "closed",
+      "merged": false,
+      "author": {
+        "login": "sevoku",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-03-29T16:56:09Z",
+        "updated_at": "2025-05-07T10:29:35Z",
+        "closed_at": "2025-05-07T10:29:33Z",
+        "merged_at": "2025-05-07T10:29:33Z",
+        "duration_hours": 929.56,
+        "duration_days": 38.73,
+        "status": "merged"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This PR adds a UriHandler with following features:\r\n* Reveal an existing account in the Azure Resources tree\r\n* Attach the account to the Workspace if it is not an Azure Resource\r\n* Open the Query editor for the specified Collection/Container if available\r\n\r\nFollowing parameters are supported (with dependencies):\r\n* `resourceId`: The full Azure Resource Id of the account\r\n   * Pattern:`vscode://ms-azuretools.vscode-cosmosdb?resourceId=[accountResourceId]`\r\n* `cs`: The NoSQL/Mongo Connection String (For NoSQL optionally with or without the `AccountKey` parameter, `AccountEndpoint` is enough to authenticate with EntraID RBAC)\r\n   * Optional Parameters (required to reveal the account in Azure Resources, will create an Attached Workspace Item otherwise)\r\n      * `subscriptionId`: Azure Subscription ID \r\n      * `resourceGroup`: Azure Resource Group Name (required for `cs`)\r\n      * `tenantId`: Id of the tenant the resource belongs to (TODO: not yet implemented!)\r\n   * Pattern: \r\n   `vscode://ms-azuretools.vscode-cosmosdb?subscriptionId=[subscriptionId]&resourceGroup=[resourceGroupName]&cs=AccountEndpoint=[connectionString]`\r\n* (optional) required to open the Query Editor:\r\n   * `database`: Database Name\r\n   * `container`: Container/Collection Name\r\n   * Pattern: `vscode://ms-azuretools.vscode-cosmosdb?resourceId=[accountResourceId]&database=[databaseName]&container=[containerName]`\r\n\r\n**IMPORTANT:** parameters – especially `cs` – must be encoded using `encodeURIComponent()`!\r\n\r\nExamples:\r\n```\r\nvscode://ms-azuretools.vscode-cosmosdb?resourceId=/subscriptions/b15d5cd6-bff3-48c1-8d58-25eeb753034b/resourceGroups/my-resource-group/providers/Microsoft.DocumentDB/databaseAccounts/my-cosmosdb-account&database=Shop&container=Products\r\n```\r\n```\r\nvscode://ms-azuretools.vscode-cosmosdb?subscriptionId=b15d5cd6-bff3-48c1-8d58-25eeb753034b&resourceGroup=my-resource-group&database=Shop&container=Products&cs=AccountEndpoint=https://cosmos.documents.azure.com:443/\r\n```\r\n\r\n### Dependency Updates:\r\n* Updated activation events in `package.json` to include `onView:azureResourceGroups` and `onUri`.\r\n* Updated `@microsoft/vscode-azext-utils` to version `2.6.6`. [[1]](diffhunk://#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519L151-R153)\r\n\r\n### Function Enhancements:\r\n* Enhanced `openNoSqlQueryEditor` function to handle different input types and added a helper function to extract connections from container nodes in `src/commands/openNoSqlQueryEditor/openNoSqlQueryEditor.ts`.\r\n\r\n### Cosmos DB Connection Handling:\r\n* Added `accountName` getter to `ParsedConnectionString` class in `src/ParsedConnectionString.ts`.\r\n* Improved error handling and parsing logic in `parseCosmosDBConnectionString` and `ParsedCosmosDBConnectionString` classes in `src/cosmosdb/cosmosDBConnectionStrings.ts`. [[1]](diffhunk://#diff-1c064d64fc2d186a21a72d65d30d5a0c6e3620230addb9b90d778ecd0f01283fL7-R14) [[2]](diffhunk://#diff-1c064d64fc2d186a21a72d65d30d5a0c6e3620230addb9b90d778ecd0f01283fL34-R50)\r\n* Added support for handling connection strings in `getAccountInfo` function in `src/tree/cosmosdb/AccountInfo.ts`.\r\n\r\n### Miscellaneous:\r\n* Registered a global URI handler in `src/extension.ts` to handle URIs.\r\n\r\nTODO:\r\n* [x] ~~add `tenantId` parameter to support multi-tenant configs~~ Should be done separately as part of https://github.com/microsoft/vscode-cosmosdb/pull/2635\r\n* [x] Implement `ClustersWorkspaceBranchDataProvider.getParent()` similar to `CosmosDBWorkspaceBranchDataProvider`\r\n* [x] Implement `MongoVCoreBranchDataProvider.getPArent()` similar to `CosmosDBBranchDataProvider`\r\n* [x] Implement Mongo support in [`openAppropriateEditorForConnection()`](https://github.com/microsoft/vscode-cosmosdb/pull/2635/files#diff-e658a4603f6f310947489252c2deea4645903dc5b8fcf18c7f1ccc94ab9a21f8R362-R377)\r\n* [x] Update [`revealAttachedInWorkspaceExplorer`](https://github.com/microsoft/vscode-cosmosdb/pull/2635/files#diff-e658a4603f6f310947489252c2deea4645903dc5b8fcf18c7f1ccc94ab9a21f8R316-R321) to use `revealWorkspaceResource` once https://github.com/microsoft/vscode-azureresourcegroups/pull/1108 becomes available in [@microsoft/vscode-azext-azureutils](https://www.npmjs.com/package/@microsoft/vscode-azureresources-api/).\r\n* [ ] `BranchDataProvider.refresh()` is never called for root node, i.e. select to \"Refresh\" a resource group, it will call `getResourceItem(resource)` right away, so there is no way for us to cache root (account/cluster) nodes. We need to either patch this in Azure Resources or find another way to detect whether to invalidate cache or not (maybe a timestamp on the resource model?)\r\n* [x] Review telemetry and masking\r\n\r\nFixes #2532\r\nFixes partially #2620",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2635",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [
+          "bk201-"
+        ],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "cross-referenced",
+          "created_at": "2025-03-31T22:18:20Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "cross-referenced",
+          "created_at": "2025-03-31T22:24:20Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "head_ref_force_pushed",
+          "created_at": "2025-04-03T14:33:15Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        }
+      ]
+    },
+    {
+      "number": 2692,
+      "title": "Import Document with Buffer for DocumentDB",
+      "state": "open",
+      "merged": false,
+      "author": {
+        "login": "xingfan-git",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-16T09:20:02Z",
+        "updated_at": "2025-05-30T10:08:38Z",
+        "closed_at": null,
+        "merged_at": null,
+        "duration_hours": 382.3,
+        "duration_days": 15.93,
+        "status": "open"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This pull request update the insert document feature for Document DB. To improve importing performance, it uses buffer to reduce the number of calls to server, and update error message handling accordingly\r\n\r\n- [x] Implement the core architecture\r\n- [x] Simplify the `ClusterDocumentBufferManager`: we don’t really need a manager here—a buffer that handles buffering and size measurement should be sufficient.  \r\n- [x] Create the buffer when needed during the import—this would behave the same as the current `ClusterDocumentBufferManager` management.  \r\n- [x] Once we have that buffer, can you make it independent of the `Document` class? Or make it generic?  \r\n- [x] The buffer should accept some configuration options when being created—provide default configurations for `Mongo` and for `CosmosDB`.  \r\n- [x] Use this improved import implementation for `CosmosDB Core` as well, so that `Azure Databases` benefits from the improvement too.  \r\n- [ ] Ship it 🚀\r\n",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2692",
+        "labels": [],
+        "assignees": [
+          "xingfan-git"
+        ],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-16T09:20:47Z",
+          "actor": "xingfan-git"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-16T09:27:31Z",
+          "actor": "xingfan-git"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T11:58:25Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-21T12:46:20Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "assigned",
+          "created_at": "2025-05-21T14:55:56Z",
+          "actor": "tnaum-ms",
+          "assignee": "xingfan-git"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "commented",
+          "created_at": "2025-05-28T05:15:30Z",
+          "actor": "xingfan-git"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-30T08:06:18Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "changes_requested"
+        }
+      ]
+    },
+    {
+      "number": 2701,
+      "title": "feat: Implement connection management in Query Editor with themed icons",
+      "state": "open",
+      "merged": false,
+      "author": {
+        "login": "bk201-",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-28T08:37:46Z",
+        "updated_at": "2025-05-28T10:30:34Z",
+        "closed_at": null,
+        "merged_at": null,
+        "duration_hours": 95.01,
+        "duration_days": 3.96,
+        "status": "open"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "Fixed: #2690\r\nNew item to open query editor quickly (The icon is still in progress)\r\n![image](https://github.com/user-attachments/assets/5867efa2-7073-4393-862a-a2bdb6995e40)\r\n\r\n- The Connect/Disconnect buttons were removed\r\n- A new dropdown with all databases and collections for current CosmosDB account was implemented\r\n![image](https://github.com/user-attachments/assets/47ee7cf5-fbc6-4164-b0c7-4176eb933fc9)\r\n- In compact mode dropdown substitutes to the menu\r\n![image](https://github.com/user-attachments/assets/906d3d34-0c64-42a3-91da-99aac923c7e2)\r\n",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2701",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-28T08:37:47Z",
+          "actor": "bk201-"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        }
+      ]
+    },
+    {
+      "number": 2699,
+      "title": "Added comments and safety code to the challenge confirmation code",
+      "state": "open",
+      "merged": false,
+      "author": {
+        "login": "tnaum-ms",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-26T10:42:02Z",
+        "updated_at": "2025-05-28T08:23:15Z",
+        "closed_at": null,
+        "merged_at": null,
+        "duration_hours": 140.94,
+        "duration_days": 5.87,
+        "status": "open"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "This pull request refactors the `getConfirmationWithNumberQuiz` function in `src/utils/dialogs/getConfirmation.ts` to improve code clarity, enhance safety, and ensure consistent behavior. The changes include renaming variables for better readability, adding detailed comments for maintainers, and implementing safeguards to prevent unintended behavior.\r\n\r\n### Improvements to code clarity and readability:\r\n* Renamed variables from `numbers` and `index` to `randomNumbers` and `randomPosition` for better semantic meaning throughout the `getConfirmationWithNumberQuiz` function and `getRandomArrayAndIndex` helper function. [[1]](diffhunk://#diff-70281c6404b5ac006f199388320a2675b42a730ee3a52026beb767ff3db87bf4L75-R93) [[2]](diffhunk://#diff-70281c6404b5ac006f199388320a2675b42a730ee3a52026beb767ff3db87bf4L108-R149)\r\n\r\n### Enhancements to safety and user experience:\r\n* Added detailed comments explaining the rationale for ensuring the correct button in the confirmation dialog is never the first (default) button, to prevent accidental confirmations.\r\n* Included a safeguard in `getConfirmationWithNumberQuiz` to handle edge cases where `randomPosition` might be 0, even though the helper function is designed to prevent this.\r\n\r\n### Updates to helper function behavior:\r\n* Refactored `getRandomArrayAndIndex` to clarify its purpose and ensure the generated `randomPosition` always excludes 0, with explanatory comments for maintainers.",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2699",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [
+          "sevoku"
+        ],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "connected",
+          "created_at": "2025-05-26T10:42:03Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-26T10:58:34Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "ready_for_review",
+          "created_at": "2025-05-26T10:58:55Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-26T10:58:56Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-26T10:59:34Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "convert_to_draft",
+          "created_at": "2025-05-26T11:29:54Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "ready_for_review",
+          "created_at": "2025-05-26T11:33:39Z",
+          "actor": "tnaum-ms"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "approved"
+        }
+      ]
+    },
+    {
+      "number": 2695,
+      "title": "Update CONTRIBUTING.md",
+      "state": "open",
+      "merged": false,
+      "author": {
+        "login": "sajeetharan",
+        "name": "",
+        "email": ""
+      },
+      "timeline": {
+        "created_at": "2025-05-20T02:59:22Z",
+        "updated_at": "2025-05-21T10:41:22Z",
+        "closed_at": null,
+        "merged_at": null,
+        "duration_hours": 292.65,
+        "duration_days": 12.19,
+        "status": "open"
+      },
+      "milestone": {
+        "title": "",
+        "description": "",
+        "state": "",
+        "due_on": "",
+        "url": ""
+      },
+      "details": {
+        "body": "Remove unsupported Databases\r\nAdd DocumentDB",
+        "url": "https://github.com/microsoft/vscode-cosmosdb/pull/2695",
+        "labels": [],
+        "assignees": [],
+        "reviewers": [
+          "tnaum-ms"
+        ],
+        "commits": 0,
+        "additions": 0,
+        "deletions": 0,
+        "changed_files": 0
+      },
+      "timeline_events": [
+        {
+          "event": "committed",
+          "created_at": "",
+          "actor": ""
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-20T02:59:23Z",
+          "actor": "sajeetharan"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T10:24:53Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "review_requested",
+          "created_at": "2025-05-21T10:24:54Z",
+          "actor": "sevoku"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        },
+        {
+          "event": "reviewed",
+          "created_at": "",
+          "actor": "",
+          "review_state": "commented"
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "total_prs": 21,
+    "merged_prs": 14,
+    "closed_prs": 3,
+    "open_prs": 4,
+    "merge_rate": 66.7,
+    "average_merge_time_hours": 206.29,
+    "average_merge_time_days": 8.6,
+    "milestone_distribution": {},
+    "top_contributors": {
+      "mkrueger": 5,
+      "sevoku": 5,
+      "tnaum-ms": 3,
+      "bk201-": 3,
+      "Copilot": 2,
+      "xingfan-msft": 1,
+      "xingfan-git": 1,
+      "sajeetharan": 1
+    }
+  }
+}

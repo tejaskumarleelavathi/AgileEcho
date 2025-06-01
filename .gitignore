@@ -1,3 +1,6 @@
+
+backend/vscode-documentdb/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -195,3 +198,4 @@ cython_debug/
 
 /node_modules/
 vscode-documentdb/
+

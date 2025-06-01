@@ -1,0 +1,30 @@
+{
+  "generated_on": "2025-06-01 05:32:47",
+  "repository": "microsoft/vscode-cosmosdb",
+  "longest_open_pr_days": 15.93,
+  "average_pr_resolution_days": 8.6,
+  "days_threshold": 8,
+  "long_running_prs": [
+    {
+      "pr_number": 2692,
+      "days_open": 15.93,
+      "title": "Import Document with Buffer for DocumentDB"
+    },
+    {
+      "pr_number": 2695,
+      "days_open": 12.19,
+      "title": "Update CONTRIBUTING.md"
+    },
+    {
+      "pr_number": 2701,
+      "days_open": 3.96,
+      "title": "feat: Implement connection management in Query Editor with themed icons"
+    },
+    {
+      "pr_number": 2699,
+      "days_open": 5.87,
+      "title": "Added comments and safety code to the challenge confirmation code"
+    }
+  ],
+  "insight": "The analysis reveals that there are two significantly long-running open PRs: #2692 (15.93 days) and #2695 (12.19 days). PR #2692 is actively being worked on with recent commits and review activity, indicating it's complex and potentially blocked on feedback. PR #2695 has been open for over 12 days with multiple review comments but no recent activity, suggesting it might be stalled. The team should focus on these two PRs to prevent further delays. Recommendations include: 1) For #2692, ensure timely review and address any blocking feedback. 2) For #2695, either get it merged quickly or close it if abandoned. 3) Implement a PR aging system to track and address stale PRs proactively. 4) Consider regular PR check-ins to prevent similar delays in the future."
+}

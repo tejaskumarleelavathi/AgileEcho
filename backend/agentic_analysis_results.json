@@ -1,0 +1,170 @@
+{
+  "totals": {
+    "open_issues": 65,
+    "closed_issues": 42
+  },
+  "blockers": [
+    {
+      "id": 2445,
+      "title": "Query Metrics are empty for the last page"
+    },
+    {
+      "id": 2443,
+      "title": "NoSQL Query Editor shows empty result"
+    },
+    {
+      "id": 2440,
+      "title": "Remove hidden input under Monaco Editor"
+    },
+    {
+      "id": 2527,
+      "title": "MongoDB error"
+    }
+  ],
+  "milestones": {
+    "0.26.1": {
+      "open": 9,
+      "closed": 2
+    },
+    "0.27.0": {
+      "open": 16,
+      "closed": 7
+    },
+    "0.28.0": {
+      "open": 7,
+      "closed": 0
+    },
+    "0.29.0": {
+      "open": 1,
+      "closed": 0
+    },
+    "0.30.0": {
+      "open": 1,
+      "closed": 0
+    },
+    "Backlog": {
+      "open": 23,
+      "closed": 1
+    },
+    "shipped 0.26.0": {
+      "open": 0,
+      "closed": 7
+    },
+    "shipped: 0.25.0": {
+      "open": 0,
+      "closed": 17
+    },
+    "shipped: 0.25.1": {
+      "open": 0,
+      "closed": 4
+    },
+    "null": {
+      "open": 8,
+      "closed": 4
+    }
+  },
+  "critical_issues": [
+    {
+      "id": 2582,
+      "title": "Importing multiple documents is very slow, need bulk-import support",
+      "milestone": "0.27.0"
+    },
+    {
+      "id": 2675,
+      "title": "[Feat] NOSQL: Set throughput bucket for requests",
+      "milestone": "0.27.0"
+    },
+    {
+      "id": 2689,
+      "title": "Support basic keyboard shortcuts in Query Editor",
+      "milestone": "0.27.0"
+    }
+  ],
+  "size_by_milestone": {
+    "0.26.1": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XS": 0,
+      "XL": 0,
+      "XXL": 0
+    },
+    "0.27.0": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XS": 0,
+      "XL": 0,
+      "XXL": 0
+    },
+    "0.28.0": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XS": 0,
+      "XL": 0,
+      "XXL": 0
+    },
+    "0.29.0": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XS": 0,
+      "XL": 0,
+      "XXL": 0
+    },
+    "0.30.0": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XS": 0,
+      "XL": 0,
+      "XXL": 0
+    },
+    "Backlog": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XS": 0,
+      "XL": 0,
+      "XXL": 0
+    },
+    "shipped 0.26.0": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XS": 0,
+      "XL": 0,
+      "XXL": 0
+    },
+    "shipped: 0.25.0": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XS": 0,
+      "XL": 0,
+      "XXL": 0
+    },
+    "shipped: 0.25.1": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XS": 0,
+      "XL": 0,
+      "XXL": 0
+    },
+    "null": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XS": 0,
+      "XL": 0,
+      "XXL": 0
+    }
+  },
+  "metadata": {
+    "total_issues": 107,
+    "analysis_timestamp": "2025-05-31T23:00:13.732469",
+    "agentic_analysis": true
+  }
+}
