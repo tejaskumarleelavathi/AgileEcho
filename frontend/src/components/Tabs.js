@@ -3,8 +3,8 @@ import './Tabs.css';
 
 const Tabs = () => (
   <div className="tabs-container">
-    <div className="tab selected">Daily</div>
-    <div className="tab">Overview</div>
+    <div className="tab selected">Overview</div>
+    <div className="tab">Daily</div>
   </div>
 );
 

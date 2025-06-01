@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 900px;
   margin: 0 auto 24px auto;
-  padding: 0 48px;
+  padding: 0 12px;
 }
 
 .theory-title {
@@ -35,4 +35,37 @@
 
 .theory-card-icon {
   font-size: 2rem;
+}
+
+/* Flex row for main cards */
+.theory-main-cards {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: nowrap;
+  margin-bottom: 18px;
+  overflow-x: visible;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.theory-main-cards > div {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone-risk-score-card {
+  margin-top: 18px !important;
+}
+
+@media (max-width: 900px) {
+  .theory-main-cards {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
 } 
