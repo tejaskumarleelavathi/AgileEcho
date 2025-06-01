@@ -33,12 +33,6 @@
   letter-spacing: -1px;
 }
 
-.tabs-center {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
 .top-right-greeting {
   display: flex;
   align-items: center;

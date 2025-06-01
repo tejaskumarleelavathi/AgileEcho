@@ -126,3 +126,9 @@ body {
   font-family: 'Poppins', sans-serif !important;
   font-weight: 700 !important;
 }
+
+.chatbox-bottom-spacer {
+  width: 100%;
+  height: 110px;
+  pointer-events: none;
+}

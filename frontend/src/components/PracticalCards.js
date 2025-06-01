@@ -91,7 +91,6 @@ const PracticalCards = () => (
         background: 'rgba(30, 30, 40, 0.55)', 
         borderRadius: 32,
         padding: 18,
-        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.22), 0 1.5px 8px 0 rgba(80,80,120,0.10) inset',
         backdropFilter: 'blur(12px)',
         border: '2px solid rgba(120,120,180,0.18)',
         position: 'relative',

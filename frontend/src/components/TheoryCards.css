@@ -10,7 +10,7 @@
   font-weight: 600;
   color: #e6ffe6;
   margin-bottom: 12px;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 
 .theory-cards-list {
@@ -22,7 +22,7 @@
 .theory-card {
   min-width: 200px;
   border-radius: 18px;
-  box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.08);
+  box-shadow: 0 2px 16px 0 rgba(230, 57, 70, 0.10);
   padding: 24px 18px;
   color: #22223b;
   font-size: 1.08rem;
