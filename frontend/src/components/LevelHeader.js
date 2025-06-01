@@ -9,7 +9,7 @@ const LevelHeader = () => (
     </div>
     <div className="level-header-tasks-group-vertical">
       <span className="level-header-objectives-label" style={{ color: '#e6ffe6', fontWeight: 700 }}>objectives</span>
-      <span className="level-header-tasks" style={{ color: '#2563eb', fontWeight: 700 }}>04/05</span>
+      <span className="level-header-tasks" style={{ color: '#2563eb', fontWeight: 700 }}>03/12</span>
     </div>
   </div>
 );

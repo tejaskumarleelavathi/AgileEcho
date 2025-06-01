@@ -3,6 +3,13 @@ from pydantic import BaseModel
 import requests
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+import os
+from llama_api_client import LlamaAPIClient
+from llama_generate_insights import main as run_issue_analysis
+from generate_pr_insight import main as run_pr_insights
+from generate_standup import main as run_standup_analysis
+from retrospective_insights import main as run_retrospective_analysis
+from gen_sankey_insight import main as run_sankey_analysis
 
 app = FastAPI()
 
@@ -14,6 +21,11 @@ HEADERS = {
     # "Authorization": "token YOUR_GITHUB_TOKEN"  # Optional
 }
 
+llama_client = LlamaAPIClient(
+    api_key=os.environ.get("LLAMA_API_KEY"),
+    base_url="https://api.llama.com/v1/",  # or the correct base URL
+)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -22,10 +34,34 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+
 class Contributor(BaseModel):
     username: str
     avatar_url: str
     last_contribution_date: str
+
+
+cache = {}
+
+@app.on_event("startup")
+async def preload_llama_reports():
+    print("🚀 Preloading Llama analysis reports...")
+
+    # Run each analysis and store results in cache
+    cache["issue_analysis"] = run_issue_analysis()
+    cache["pr_insights"] = run_pr_insights()
+    cache["standup"] = run_standup_analysis()
+    cache["retrospective"] = run_retrospective_analysis()
+    cache["sankey"] = run_sankey_analysis()
+
+    print("✅ Cached all analysis reports.")
+
+
+@app.get("/insight-analysis")
+def get_insight_analysis():
+    return cache
+    
 
 @app.get("/top-contributors", response_model=list[Contributor])
 def get_top_contributors(owner: str = "microsoft", repo: str = "vscode-cosmosdb", top_n: int = 4):
@@ -135,10 +171,34 @@ def get_retrospectives():
         "retrospective": "## 🎯 MILESTONE OVERVIEW\n- Milestone name: shipped: 0.25.0\n- Timeline: 2025-02-17 to 2025-02-28\n- Scope and key deliverables: API Upgrade - Migrating Tree View to V2, \"Readme\": update for better user engagement\n- Overall team performance summary: The team successfully delivered the milestone with key features and improvements, showing good collaboration and productivity.\n\n## ✅ WHAT WENT WELL (Positives/Wins)\n- Tomasz Naumowicz and Dmitrii Shilov made significant contributions to the API Upgrade for Tree View V2.\n- Efficient development patterns were observed with quick PR turnarounds.\n- The team demonstrated good collaboration in integrating the new Tree API V2.\n- The \"Readme\" update improved user engagement and clarity.\n\n## 🚧 WHAT DIDN'T GO WELL (Pain Points/Challenges)\n- Some PRs took longer than expected to review and merge.\n- There were instances of rework indicated by multiple commits in some PRs.\n- Uneven workload distribution was observed among team members.\n\n## 🔍 WHAT WE LEARNED (Insights/Discoveries)\n- The team gained insights into the new Tree API V2 and its integration challenges.\n- Process learnings included the importance of timely PR reviews.\n- Patterns in commit/PR data showed a need for better workload distribution.\n- Skills development was evident in team members handling new API integrations.\n\n## 🎯 ACTION ITEMS (Improvements for Next Sprint)\n- Improve PR review process to reduce turnaround time.\n- Enhance workload distribution among team members.\n- Continue knowledge sharing on the new Tree API V2.\n- Focus on reducing technical debt introduced during the milestone.\n\n## 📊 TEAM PERFORMANCE METRICS\n- Commit frequency: Regular commits were observed throughout the milestone.\n- PR review and merge time: Some PRs took longer than expected.\n- Code contribution distribution: Tomasz Naumowicz and Dmitrii Shilov were top contributors.\n- Active development days: Team members were active throughout the milestone period.\n\n## 🏆 INDIVIDUAL CONTRIBUTIONS & RECOGNITION\n- Tomasz Naumowicz: Led the API Upgrade for Tree View V2 effort.\n- Dmitrii Shilov: Made significant contributions to the Tree View V2 migration.\n- Emerging leaders: Dmitrii Shilov showed leadership in handling complex tasks.\n\n## 📈 MILESTONE SUCCESS CRITERIA\n- Delivery timeline: The milestone was delivered on time.\n- Quality of deliverables: High-quality deliverables were achieved.\n- Team velocity: The team showed good productivity.\n- Technical debt: Some technical debt was introduced but is being addressed.\n- Stakeholder satisfaction: Stakeholders were satisfied with the milestone delivery."
     }
 
+class QuestionRequest(BaseModel):
+    question: str
+
 @app.post("/ask")
-async def ask_question(request: Request):
-    data = await request.json()
-    question = data.get("question", "")
-    # For now, always return a sample answer
-    return {"answer": f"This is a sample answer to your question: '{question}'. (Replace this with real logic later)"}
+async def ask_question(request: QuestionRequest):
+    system_prompt = "You are a coding assistant who helps in debugging the code and gives new ways or functions of code."
+
+    response = llama_client.chat.completions.create(
+        model="Llama-4-Maverick-17B-128E-Instruct-FP8",  # adjust to your allowed model
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": request.question}
+        ],
+    )
+
+    # return {
+    #     "answer": response.completion_message["content"]["text"]
+    # }
+    if hasattr(response, 'completion_message'):
+        completion_msg = response.completion_message
+        if hasattr(completion_msg, 'content'):
+            content = completion_msg.content
+            if hasattr(content, 'text'):
+                return content.text
+            else:
+                return str(content)
+    else:
+        return {"answer": response}
+    # return {"answer": f"'{question}'. "}
+
 

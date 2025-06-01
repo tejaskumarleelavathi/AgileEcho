@@ -1,0 +1,163 @@
+{
+  "standup_date": "2024-05-26",
+  "generated_at": "2025-06-01T11:23:29.514840",
+  "total_users_analyzed": 7,
+  "active_users_count": 2,
+  "inactive_users_count": 5,
+  "users": [
+    {
+      "username": "Tomasz Naumowicz",
+      "email": "tnaumowicz@microsoft.com",
+      "was_active": true,
+      "activity_summary": {
+        "commits_count": 2,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 2
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [
+          "Merged PR #2696: Re-insert the node on refresh in BaseCachedBranchDataProvider",
+          "Merged PR #2698: Update launchShell command to support different shell environments on Windows"
+        ],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "Successfully merged two PRs related to BaseCachedBranchDataProvider and launchShell command",
+        "No blockers identified as both PRs were merged successfully"
+      ]
+    },
+    {
+      "username": "Mike Krüger",
+      "email": "mikkrg@microsoft.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "No commits on 2024-05-26, possibly due to other tasks or meetings"
+      ]
+    },
+    {
+      "username": "copilot-swe-agent[bot]",
+      "email": "198982749+Copilot@users.noreply.github.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "Bot was inactive on 2024-05-26, last activity was on 2025-05-21"
+      ]
+    },
+    {
+      "username": "Vsevolod Kukol",
+      "email": "sevoku@microsoft.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "No commits on 2024-05-26, last activity was on 2025-05-19"
+      ]
+    },
+    {
+      "username": "Dmitry Shilov",
+      "email": "dshilov@microsoft.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "No commits on 2024-05-26, last activity was on 2025-05-16"
+      ]
+    },
+    {
+      "username": "Dmitrii Shilov",
+      "email": "dshilov@microsoft.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "No commits on 2024-05-26, last activity was on 2025-05-14"
+      ]
+    },
+    {
+      "username": "Sevo Kukol",
+      "email": "sevoku@microsoft.com",
+      "was_active": false,
+      "activity_summary": {
+        "commits_count": 0,
+        "files_changed": 0,
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "prs_worked_on": 0
+      },
+      "standup_report": {
+        "what_i_did_yesterday": [],
+        "blockers": [],
+        "what_im_working_on_today": []
+      },
+      "insights": [
+        "No commits on 2024-05-26, last activity was on 2025-05-09"
+      ]
+    }
+  ],
+  "team_insights": {
+    "overall_productivity": "Low on 2024-05-26 due to inactivity from most team members",
+    "team_velocity": "Low",
+    "collaboration_level": "Limited collaboration observed on 2024-05-26",
+    "potential_bottlenecks": [],
+    "recommendations": [
+      "Review team workload distribution",
+      "Encourage regular updates on ongoing tasks"
+    ]
+  }
+}

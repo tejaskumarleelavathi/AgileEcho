@@ -1,0 +1,30 @@
+{
+  "generated_on": "2025-06-01 11:23:29",
+  "repository": "microsoft/vscode-cosmosdb",
+  "longest_open_pr_days": 15.93,
+  "average_pr_resolution_days": 8.6,
+  "days_threshold": 8,
+  "long_running_prs": [
+    {
+      "pr_number": 2692,
+      "days_open": 15.93,
+      "title": "Import Document with Buffer for DocumentDB"
+    },
+    {
+      "pr_number": 2701,
+      "days_open": 3.96,
+      "title": "feat: Implement connection management in Query Editor with themed icons"
+    },
+    {
+      "pr_number": 2699,
+      "days_open": 5.87,
+      "title": "Added comments and safety code to the challenge confirmation code"
+    },
+    {
+      "pr_number": 2695,
+      "days_open": 12.19,
+      "title": "Update CONTRIBUTING.md"
+    }
+  ],
+  "insight": "The analysis reveals four open PRs exceeding the 8-day threshold, with the longest being PR 2692 at 15.93 days. PR 2695 has been open for 12.19 days. The average PR resolution time is 8.6 days, indicating that PRs are generally taking longer than average to resolve. The main bottleneck appears to be the review process, as many PRs show multiple review requests without resolution. Recommendations include implementing a more streamlined review process, assigning dedicated reviewers to long-running PRs, and considering breaking down complex PRs into smaller, more manageable chunks. Additionally, improving communication around PR status and expectations could help reduce delays."
+}
