@@ -1,0 +1,61 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 32px 48px 0 48px;
+  position: relative;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #22223b;
+  letter-spacing: -2px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dot {
+  color: #ffcb05;
+  font-size: 2.5rem;
+}
+
+.header-title-block {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.top-right-greeting {
+  display: flex;
+  align-items: center;
+  background: rgba(40, 40, 40, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+  padding: 8px 18px 8px 12px;
+  z-index: 10;
+}
+
+.profile-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+  margin-right: 10px;
+}
+
+.greeting-text {
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+} 
