@@ -1,0 +1,1590 @@
+{
+  "metadata": {
+    "total_issues": 107,
+    "extracted_at": "2025-06-01T00:15:42.262920",
+    "extraction_method": "Llama 4 Scout + Fallback",
+    "fields_extracted": [
+      "issue_id",
+      "type",
+      "labels",
+      "milestone",
+      "priority",
+      "user"
+    ]
+  },
+  "extracted_issues": [
+    {
+      "issue_id": 2460,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.26.1",
+      "priority": "P1",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2456,
+      "type": null,
+      "labels": [
+        "mongo",
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.26.1",
+      "priority": "P1",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2445,
+      "type": "bug",
+      "labels": [
+        "bug",
+        "external",
+        "NoSQL"
+      ],
+      "milestone": "0.26.1",
+      "priority": "P1",
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2443,
+      "type": "bug",
+      "labels": [
+        "bug",
+        "external",
+        "NoSQL"
+      ],
+      "milestone": "0.26.1",
+      "priority": "P1",
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2463,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.26.1",
+      "priority": "P1",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2484,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.26.1",
+      "priority": "P2",
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2694,
+      "type": "bug",
+      "labels": [
+        "bug"
+      ],
+      "milestone": "0.26.1",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2697,
+      "type": null,
+      "labels": [],
+      "milestone": "0.26.1",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2550,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "user feedback"
+      ],
+      "milestone": "0.26.1",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2593,
+      "type": null,
+      "labels": [
+        "engineering"
+      ],
+      "milestone": "0.26.1",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2422,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.26.1",
+      "priority": null,
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2416,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P0",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2497,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P1",
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2503,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P1",
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2446,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P1",
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2513,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P1",
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2542,
+      "type": null,
+      "labels": [
+        "NoSQL",
+        "user feedback"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P1",
+      "user": {
+        "login": "jjindrich",
+        "id": 12845561,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2549,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "user feedback"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P1",
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2437,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "AT-CTI",
+        "NoSQL"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P2",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2454,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P2",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2619,
+      "type": "bug",
+      "labels": [
+        "bug",
+        "NoSQL"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P2",
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2483,
+      "type": "feature",
+      "labels": [
+        "feature"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P2",
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2556,
+      "type": "enhancement",
+      "labels": [
+        "enhancement",
+        "NoSQL"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P2",
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2469,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.27.0",
+      "priority": null,
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2488,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": "0.27.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2567,
+      "type": null,
+      "labels": [
+        "NoSQL",
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.27.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2582,
+      "type": "enhancement",
+      "labels": [
+        "P1",
+        "enhancement",
+        "NoSQL",
+        "MongoDB Clusters",
+        "performance"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P1",
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2620,
+      "type": "feature",
+      "labels": [
+        "feature"
+      ],
+      "milestone": "0.27.0",
+      "priority": null,
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2624,
+      "type": null,
+      "labels": [
+        "NoSQL"
+      ],
+      "milestone": "0.27.0",
+      "priority": null,
+      "user": {
+        "login": "aliuy",
+        "id": 1420977,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2639,
+      "type": "enhancement",
+      "labels": [
+        "enhancement",
+        "NoSQL"
+      ],
+      "milestone": "0.27.0",
+      "priority": null,
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2649,
+      "type": null,
+      "labels": [
+        "mongo",
+        "MongoDB Clusters"
+      ],
+      "milestone": "0.27.0",
+      "priority": null,
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2675,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "P1",
+        "NoSQL"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P1",
+      "user": {
+        "login": "sajeetharan",
+        "id": 4833351,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2682,
+      "type": null,
+      "labels": [
+        "NoSQL"
+      ],
+      "milestone": "0.27.0",
+      "priority": null,
+      "user": {
+        "login": "r0qib",
+        "id": 201637065,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2689,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "P1"
+      ],
+      "milestone": "0.27.0",
+      "priority": "P1",
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2487,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": "0.28.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2482,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "engineering",
+        "future"
+      ],
+      "milestone": "0.28.0",
+      "priority": null,
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2586,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "suggestion",
+        "MongoDB Clusters",
+        "user feedback"
+      ],
+      "milestone": "0.28.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2621,
+      "type": "feature",
+      "labels": [
+        "feature"
+      ],
+      "milestone": "0.28.0",
+      "priority": null,
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2592,
+      "type": null,
+      "labels": [
+        "postgres",
+        "NoSQL"
+      ],
+      "milestone": "0.28.0",
+      "priority": null,
+      "user": {
+        "login": "alexweininger",
+        "id": 12476526,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2690,
+      "type": null,
+      "labels": [
+        "P2",
+        "suggestion"
+      ],
+      "milestone": "0.28.0",
+      "priority": "P2",
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2691,
+      "type": "enhancement",
+      "labels": [
+        "enhancement"
+      ],
+      "milestone": "0.28.0",
+      "priority": null,
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2432,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": "0.29.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2480,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": "0.30.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2507,
+      "type": null,
+      "labels": [],
+      "milestone": "Backlog",
+      "priority": "P2",
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2500,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL",
+        "MongoDB Clusters"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2499,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL",
+        "MongoDB Clusters"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2498,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2504,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2505,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2496,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2495,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2494,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2493,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2479,
+      "type": null,
+      "labels": [
+        "AT-CTI"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2461,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2509,
+      "type": null,
+      "labels": [],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2486,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2485,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2489,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2490,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2491,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2508,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2473,
+      "type": "bug",
+      "labels": [
+        "bug",
+        "mongo",
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2510,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2521,
+      "type": null,
+      "labels": [],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2528,
+      "type": null,
+      "labels": [],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2531,
+      "type": "enhancement",
+      "labels": [
+        "feature",
+        "enhancement",
+        "NoSQL"
+      ],
+      "milestone": "Backlog",
+      "priority": null,
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2532,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "NoSQL",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped 0.26.0",
+      "priority": "P0",
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2459,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped 0.26.0",
+      "priority": "P1",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2452,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped 0.26.0",
+      "priority": "P2",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2583,
+      "type": "bug",
+      "labels": [
+        "bug",
+        "P2",
+        "NoSQL"
+      ],
+      "milestone": "shipped 0.26.0",
+      "priority": "P2",
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2564,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped 0.26.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2596,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped 0.26.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2423,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped 0.26.0",
+      "priority": null,
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2523,
+      "type": null,
+      "labels": [],
+      "milestone": "shipped: 0.25.0",
+      "priority": "P0",
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2458,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": "P1",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2418,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": "P2",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2417,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": "P2",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2451,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": "P2",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2439,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "future",
+        "NoSQL"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": "P2",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2468,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": "P2",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2478,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": "P2",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2524,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": "P2",
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2526,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": "P2",
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2440,
+      "type": "bug",
+      "labels": [
+        "bug",
+        "blocked",
+        "In progress"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": null,
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2457,
+      "type": "bug",
+      "labels": [
+        "bug",
+        "AT-CTI"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": null,
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2449,
+      "type": null,
+      "labels": [
+        "future",
+        "NoSQL"
+      ],
+      "milestone": "shipped: 0.25.0",
+      "priority": null,
+      "user": {
+        "login": "sevoku",
+        "id": 951587,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2514,
+      "type": null,
+      "labels": [],
+      "milestone": "shipped: 0.25.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2516,
+      "type": null,
+      "labels": [],
+      "milestone": "shipped: 0.25.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2517,
+      "type": null,
+      "labels": [],
+      "milestone": "shipped: 0.25.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2540,
+      "type": null,
+      "labels": [],
+      "milestone": "shipped: 0.25.0",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2474,
+      "type": null,
+      "labels": [
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.1",
+      "priority": "P0",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2515,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.1",
+      "priority": "P1",
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2475,
+      "type": null,
+      "labels": [
+        "⛔ won't fix",
+        "AT-CTI",
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.1",
+      "priority": "P2",
+      "user": {
+        "login": "v-ruizh",
+        "id": 45614674,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2565,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters"
+      ],
+      "milestone": "shipped: 0.25.1",
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2502,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters"
+      ],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2472,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "In progress"
+      ],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2527,
+      "type": null,
+      "labels": [
+        "external",
+        "MongoDB Clusters"
+      ],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "deeberkowitz",
+        "id": 172842124,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2551,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "user feedback"
+      ],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2552,
+      "type": null,
+      "labels": [
+        "needs-verification",
+        "MongoDB Clusters",
+        "user feedback"
+      ],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2553,
+      "type": null,
+      "labels": [
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2563,
+      "type": "feature",
+      "labels": [
+        "feature",
+        "MongoDB Clusters",
+        "feedback wanted"
+      ],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "sajeetharan",
+        "id": 4833351,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2575,
+      "type": null,
+      "labels": [
+        "investigate"
+      ],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2597,
+      "type": null,
+      "labels": [],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "bk201-",
+        "id": 6812525,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2632,
+      "type": "enhancement",
+      "labels": [
+        "mongo",
+        "enhancement",
+        "NoSQL",
+        "MongoDB Clusters"
+      ],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "pa-andersonoliveira",
+        "id": 191273589,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2628,
+      "type": "bug",
+      "labels": [
+        "bug",
+        "postgres"
+      ],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "danielmeppiel",
+        "id": 51440732,
+        "type": "User"
+      }
+    },
+    {
+      "issue_id": 2636,
+      "type": null,
+      "labels": [],
+      "milestone": null,
+      "priority": null,
+      "user": {
+        "login": "tnaum-ms",
+        "id": 171359267,
+        "type": "User"
+      }
+    }
+  ]
+}

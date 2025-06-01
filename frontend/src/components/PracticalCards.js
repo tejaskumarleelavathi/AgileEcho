@@ -82,37 +82,49 @@ const sankeyOptions = {
   chartArea: { left: 0, top: 0, width: '100%', height: '100%' },
 };
 
-const PracticalCards = () => (
-  <div className="practical-section">
-    <div className="practical-title">Overall Flow</div>
-    <div
-      style={{
-        width: '100%',
-        background: 'rgba(30, 30, 40, 0.55)', 
-        borderRadius: 32,
-        padding: 18,
-        backdropFilter: 'blur(12px)',
-        border: '2px solid rgba(120,120,180,0.18)',
-        position: 'relative',
-        marginBottom: 32,
-      }}
-    >
-      <Chart
-        chartType="Sankey"
-        width="100%"
-        height="340px"
-        data={sankeyData}
-        options={sankeyOptions}
-      />
+const PracticalCards = ({ insightData }) => {
+  // Extract sankey insights from insightData if available
+  const sankeyInsights = insightData?.sankey
+    ? [insightData.sankey.insight_1, insightData.sankey.insight_2, insightData.sankey.insight_3]
+    : [
+        { title: 'TestBlock 1', finding: 'Placeholder finding 1.' },
+        { title: 'TestBlock 2', finding: 'Placeholder finding 2.' },
+        { title: 'TestBlock 3', finding: 'Placeholder finding 3.' },
+      ];
+
+  return (
+    <div className="practical-section">
+      <div className="practical-title">Overall Flow</div>
+      <div
+        style={{
+          width: '100%',
+          background: 'rgba(30, 30, 40, 0.55)', 
+          borderRadius: 32,
+          padding: 18,
+          backdropFilter: 'blur(12px)',
+          border: '2px solid rgba(120,120,180,0.18)',
+          position: 'relative',
+          marginBottom: 32,
+        }}
+      >
+        <Chart
+          chartType="Sankey"
+          width="100%"
+          height="340px"
+          data={sankeyData}
+          options={sankeyOptions}
+        />
+      </div>
+      <div className="practical-cards-list">
+        {sankeyInsights.map((insight, i) => (
+          <div key={i} className="practical-card">
+            {/* <div className="practical-card-title">{insight.title}</div> */}
+            <div className="practical-card-finding">{insight.finding}</div>
+          </div>
+        ))}
+      </div>
     </div>
-    <div className="practical-cards-list">
-      {cards.map((card, i) => (
-        <div key={i} className="practical-card">
-          <div className="practical-card-title">{card.title}</div>
-        </div>
-      ))}
-    </div>
-  </div>
-);
+  );
+};
 
 export default PracticalCards; 

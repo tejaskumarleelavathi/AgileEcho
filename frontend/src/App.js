@@ -87,35 +87,35 @@ function SplashScreen({ onFinish }) {
   );
 }
 
-function DailyPage() {
+function DailyPage({ insightData, loading, error }) {
   return (
     <div>
       <Header />
       <Tabs />
       <LevelHeader />
       <TeamMembers />
-      <TeamProgress />
+      <TeamProgress insightData={insightData} loading={loading} error={error} />
       <div className="chatbox-bottom-spacer" />
     </div>
   );
 }
 
-function OverviewPage() {
+function OverviewPage({ insightData, loading, error }) {
   return (
     <>
       <Header />
       <Tabs />
       <LevelHeader />
-      <Objectives />
-      <PracticalCards />
-      <TheoryCards />
+      <Objectives insightData={insightData} loading={loading} error={error} />
+      <PracticalCards insightData={insightData} />
+      <TheoryCards insightData={insightData} loading={loading} error={error} />
       <ChatBox />
       <div className="chatbox-bottom-spacer" />
     </>
   );
 }
 
-function RetrospectivesPage() {
+function RetrospectivesPage({ insightData, loading, error }) {
   return (
     <>
       <Header />
@@ -128,19 +128,40 @@ function RetrospectivesPage() {
 }
 
 function App() {
-  const [showSplash, setShowSplash] = useState(true);
+  const [splashDone, setSplashDone] = useState(false);
+  const [insightData, setInsightData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch data as soon as the app loads
   useEffect(() => {
-    if (!showSplash) return;
-  }, [showSplash]);
+    fetch('http://127.0.0.1:8000/insight-analysis')
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to fetch insight data');
+        return res.json();
+      })
+      .then(data => {
+        setInsightData(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, []);
+
+  // Only show dashboard when both splash and data are ready
+  const ready = splashDone && !loading;
+
   return (
     <>
-      {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
-      {!showSplash && (
+      {(!ready) && <SplashScreen onFinish={() => setSplashDone(true)} />}
+      {ready && (
         <Router>
           <Routes>
-            <Route path="/" element={<OverviewPage />} />
-            <Route path="/daily" element={<DailyPage />} />
-            <Route path="/retrospectives" element={<RetrospectivesPage />} />
+            <Route path="/" element={<OverviewPage insightData={insightData} loading={loading} error={error} />} />
+            <Route path="/daily" element={<DailyPage insightData={insightData} loading={loading} error={error} />} />
+            <Route path="/retrospectives" element={<RetrospectivesPage insightData={insightData} loading={loading} error={error} />} />
           </Routes>
         </Router>
       )}

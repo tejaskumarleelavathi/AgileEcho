@@ -1,0 +1,72 @@
+```javascript
+const sankeyData = [
+  ["From", "To", "Weight"],
+  
+  // Stage 1: Type → Primary Label
+  ["Bug", "AT-CTI", 8],
+  ["Bug", "MongoDB Clusters", 6],
+  ["Bug", "NoSQL", 6],
+  ["Feature", "AT-CTI", 3],
+  ["Feature", "NoSQL", 17],
+  ["Feature", "MongoDB Clusters", 4],
+  ["Enhancement", "NoSQL", 7],
+  ["Enhancement", "MongoDB Clusters", 1],
+  
+  // Stage 2: Primary Label → Priority
+  ["AT-CTI", "P1", 6],
+  ["AT-CTI", "P0", 2],
+  ["AT-CTI", "P2", 6],
+  ["MongoDB Clusters", "P1", 9],
+  ["MongoDB Clusters", "P2", 3],
+  ["NoSQL", "P1", 6],
+  ["NoSQL", "P2", 4],
+  
+  // Stage 3: Priority → Milestone
+  ["P0", "0.27.x", 2],
+  ["P0", "Shipped", 2],
+  ["P1", "0.26.x", 6],
+  ["P1", "0.27.x", 12],
+  ["P1", "Shipped", 3],
+  ["P2", "0.26.x", 2],
+  ["P2", "0.27.x", 4],
+  ["P2", "Backlog", 2],
+  
+  // Stage 4: Milestone → User
+  ["0.26.x", "v-ruizh", 6],
+  ["0.26.x", "bk201-", 3],
+  ["0.27.x", "tnaum-ms", 7],
+  ["0.27.x", "sevoku", 6],
+  ["Shipped", "v-ruizh", 12],
+  ["Shipped", "tnaum-ms", 8],
+  ["Backlog", "tnaum-ms", 12],
+  ["Backlog", "bk201-", 7],
+  ["Backlog", "sevoku", 4]
+];
+```
+
+## Analysis of GitHub Issues Data
+
+The provided GitHub issues data was analyzed and transformed into a Sankey diagram format. The data includes 107 issues with various attributes such as type, labels, milestone, priority, and user information.
+
+### Key Observations:
+
+1. **Type Distribution**: The issues are primarily categorized into three types: Feature (44%), Bug (23%), and Enhancement (13%). Other types are either null or not explicitly categorized.
+
+2. **Primary Label Analysis**: The primary labels were determined based on the presence of specific labels like "AT-CTI", "MongoDB Clusters", and "NoSQL". "NoSQL" and "MongoDB Clusters" are the most common primary labels, indicating a significant focus on these areas.
+
+3. **Priority Distribution**: Priorities are mainly distributed among P1 (43%), P2 (21%), and P0 (7%). A significant portion of issues (29%) do not have a specified priority.
+
+4. **Milestone Analysis**: Milestones are grouped into versions like "0.26.x", "0.27.x", "Shipped", and "Backlog". Most issues are either in "0.27.x" (25%), "Backlog" (31%), or "Shipped" (24%).
+
+5. **User Involvement**: Key users involved in the issues include "tnaum-ms", "v-ruizh", "sevoku", and "bk201-". "tnaum-ms" and "v-ruizh" are the most active users across different milestones.
+
+### Sankey Diagram Insights:
+
+The Sankey diagram illustrates the flow of issues through different stages from Type to User. Key observations include:
+
+- Feature requests are predominantly labeled as "NoSQL" and are mostly in the "Backlog" milestone.
+- Bugs are primarily associated with "AT-CTI" and "MongoDB Clusters", with a significant number being addressed in "0.26.x" and "0.27.x" milestones.
+- P1 priority issues are the most common and are distributed across "0.26.x", "0.27.x", and "Shipped" milestones.
+- Users "tnaum-ms" and "v-ruizh" are heavily involved across various milestones, indicating their significant role in issue resolution.
+
+The analysis provides a comprehensive overview of how issues flow through different stages, helping in identifying bottlenecks, areas of focus, and user involvement.
