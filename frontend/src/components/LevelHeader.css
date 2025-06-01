@@ -1,0 +1,50 @@
+.level-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 32px auto 18px auto;
+  padding: 0 80px;
+}
+
+.level-header-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  text-align: left;
+}
+
+.level-header-tasks {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -2px;
+  text-align: right;
+  line-height: 1;
+}
+
+.level-header-tasks-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.level-header-tasks-group-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.level-header-objectives-label {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.01em;
+  text-align: right;
+} 
